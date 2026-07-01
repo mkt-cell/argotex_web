@@ -1,0 +1,216 @@
+{
+  "navbar": {
+    "home": "Home",
+    "about": "About us",
+    "cleanroom": "Cleanroom",
+    "lifecycle": "Project Lifecycle",
+    "projects": "Projects",
+    "downloads": "Downloads",
+    "solutions": "Solutions",
+    "contact": "Contact"
+  },
+  "topbar": {
+    "text": "⚡ Complete Biopharma Manufacturing Solutions — From Design to Production",
+    "badge": "21 CFR Part 11 Fully Compliant · ✓ GMP Certified Designs"
+  },
+  "cta": {
+    "consult": "Book an Engineering Consultation",
+    "catalog": "Engineering Catalog"
+  },
+  "hero": {
+    "badge": "Turnkey Biopharma Production Integrator · ✓ GMP Certified Designs",
+    "tagline": "Design • Integrate • Validate — Complete Biopharma Systems",
+    "title": "Complete Turnkey Biopharma Lines — Built for Compliance, Engineered for Output",
+    "desc": "ARGOTEX integrates modular cleanroom environments, process formulation vessels, high-barrier isolator systems, secure SCADA configurations, and complete verification protocols (IQ/OQ/PQ) under PIC/S GMP directives.",
+    "credit": "Founded by biopharmaceutical engineering specialists with over 50 years of cumulative international GMP experience."
+  },
+  "trust": {
+    "exp_value": "50+",
+    "exp_label": "Cumulative Years of Biopharma Expertise — Led by senior validation & design engineers",
+    "val_value": "100%",
+    "val_label": "IQ/OQ/PQ Validation Success — Zero audit failures in local & international inspections",
+    "sla_value": "24/7",
+    "sla_label": "Engineering SLA Support — Dedicated hotline for plant automation & PLC diagnostics",
+    "compliance_value": "21 CFR",
+    "compliance_label": "Part 11 Compliant Software — Cryptographically signed audit trails"
+  },
+  "lifecycle": {
+    "title": "The Biopharma Plant Delivery Journey",
+    "desc": "From the initial CAD conceptual flow designs to international regulatory audit validations, we manage and assume complete ownership of your production lifecycle.",
+    "steps": [
+      {
+        "num": "1",
+        "title": "Conceptual Design & P&ID",
+        "subtitle": "Conceptual Design & P&ID",
+        "std": "Standard: GMP – WHO & PIC/S",
+        "desc": "We draft compliance layout flows for HVAC systems, materials, and operators using advanced 3D simulations. Developing initial P&ID diagrams ensuring early validation mapping.",
+        "deliverables": ["Conceptual 3D Layouts", "Material & Personnel Flows", "P&ID Process Diagrams"]
+      },
+      {
+        "num": "2",
+        "title": "Modular Cleanroom & HVAC Build",
+        "subtitle": "Modular Cleanroom & HVAC Build",
+        "std": "Standard: ISO 14644-1, EU GMP Grade A-D",
+        "desc": "Installation of modular, non-shedding cleanroom wall panels and ceiling systems. Integrating custom AHUs with HEPA filtration to maintain precise temperature, humidity, and differential pressures.",
+        "deliverables": ["Modular cleanroom wall structures", "Digital air pressure panels", "HEPA Terminal Filter setups"]
+      },
+      {
+        "num": "3",
+        "title": "Process Integration & Piping",
+        "subtitle": "Process Integration & Piping",
+        "std": "Standard: ASME BPE Standards",
+        "desc": "Integrating high-speed aseptic filling systems, isolator barriers, and preparation tanks. Specialized piping network build utilizing mirror-finish 316L stainless steel and clean sanitary valves.",
+        "deliverables": ["Argon automated orbital welding", "Jacketed preparation skids", "CIP/SIP automated validation loops"]
+      },
+      {
+        "num": "4",
+        "title": "Automation, SCADA & CSV",
+        "subtitle": "Automation, SCADA & CSV",
+        "std": "Standard: GAMP 5, FDA 21 CFR Part 11",
+        "desc": "Software calibration and SCADA development. We engineer central control panels under strict computer software validation (CSV) rules, ensuring every recipe change is authorized, signed, and tracked.",
+        "deliverables": ["FDA Part 11 secure audit trails", "SCADA dashboard integration", "Biometric / secure PIN logic"]
+      },
+      {
+        "num": "5",
+        "title": "Qualification & Validation",
+        "subtitle": "Qualification & Validation",
+        "std": "Standard: PIC/S GMP, FDA Inspection Ready",
+        "desc": "Executing detailed IQ/OQ/PQ validation protocols. We run onsite stress tests, cleanroom particle counts, and process validation to build comprehensive documentation packages for regulatory bodies.",
+        "deliverables": ["Comprehensive IQ/OQ/PQ binders", "Software validation reports", "Risk-assessment matrices (FMEA)"]
+      }
+    ]
+  },
+  "solutions": {
+    "title": "Core Integration Solutions",
+    "desc": "Explore our turnkey solid, liquid, and semi-solid formulations systems integrated for sterile GMP environments.",
+    "items": [
+      {
+        "id": "sterile",
+        "title": "Sterile Production",
+        "subtitle": "Sterile Production",
+        "badge": "Grade A Aseptic Filling & Isolators",
+        "desc": "Turnkey design of high-speed sterile filling lines, isolation barriers (Isolator), and sterilization tunnels utilizing VHP decontamination loop cycles to guarantee absolute sterility and particulate control.",
+        "specs": "Aseptic filling lines and isolation barriers with VHP sterilization tunnels.",
+        "features": ["Barrier Isolator Systems", "Automated VHP cycle disinfection", "Non-contact peristaltic fill pumps"],
+        "products": ["Vaccines", "Injectables", "Ophthalmics", "Sterile Dry Powders"]
+      },
+      {
+        "id": "solid",
+        "title": "Solid Dosage",
+        "subtitle": "Solid Dosage",
+        "badge": "Continuous Compression & Coating",
+        "desc": "High-yield tablet press lines with closed weight feedback loop controls, capsule filling units, and continuous coating lines. Designed with dust extraction containment systems.",
+        "specs": "High-yield tablet press lines with weight feedback loop controls and dust containment.",
+        "features": ["100% tablet weight control systems", "Capsule filling for powder/pellets", "Continuous coating lines"],
+        "products": ["Tablets", "Capsules", "Coated Caplets", "Bi-layer Tablets"]
+      },
+      {
+        "id": "semisolid",
+        "title": "Semi-Solid Dosage",
+        "subtitle": "Semi-Solid Dosage",
+        "badge": "Vacuum Emulsification & Tubes",
+        "desc": "Vacuum homogenizing emulsifier vessels for fine ointment blending, preventing air pocket bubbles. Integrated with automated pharmaceutical tube filling and crimp sealing systems.",
+        "specs": "Vacuum homogenizing emulsifiers and tube filling machines.",
+        "features": ["Vacuum Homogenizer mix vessels", "Automated tube seal & print coding", "CIP sanitizing loops"],
+        "products": ["Creams", "Ointments", "Medical Gels", "Suppositories"]
+      },
+      {
+        "id": "liquid",
+        "title": "Liquid Dosage",
+        "subtitle": "Liquid Dosage",
+        "badge": "High-Precision Syrup & Suspensions",
+        "desc": "Syrup and suspension preparation vessels connected to automated bottle wash, filling, and cap torque controllers. Complete line design including volume verification cameras.",
+        "specs": "Syrup & suspension preparation lines with bottle wash and inspection.",
+        "features": ["CIP/SIP mixing vessels & pipes", "Low-tolerance volumetric filling pumps", "Final inspection cameras"],
+        "products": ["Oral Syrups", "Suspensions", "Ophthalmic Drops", "Topical Liquids"]
+      }
+    ]
+  },
+  "projects": {
+    "title": "Featured Case Studies",
+    "desc": "Read about our successfully validated line integrations and modular cleanroom builds.",
+    "duration_label": "Duration",
+    "project_type_label": "Project Type"
+  },
+  "why": {
+    "title": "Why ARGOTEX",
+    "desc": "A Complete Systems Integrator. We design, build, and support fully compliant production lines. We own the verification process rather than just selling machinery.",
+    "items": [
+      {
+        "title": "End-to-End System",
+        "desc": "Comprehensive project ownership from initial CAD flow layouts to qualification binders (IQ/OQ/PQ)."
+      },
+      {
+        "title": "Local Engineering 24/7",
+        "desc": "Experienced in-country technical team available for scheduled service SLA and PLC emergency modifications."
+      },
+      {
+        "title": "Global FDA & GMP Standards",
+        "desc": "Our software designs and panel overrides comply with FDA 21 CFR Part 11, GAMP 5, and EU Annex 1."
+      },
+      {
+        "title": "Uptime Support Lifecycle",
+        "desc": "Custom calibration scheduling and preventive maintenance to optimize Overall Equipment Effectiveness (OEE)."
+      }
+    ]
+  },
+  "downloads": {
+    "title": "Downloads & Technical Resources",
+    "desc": "Access detailed catalogs, product brochures, modular cleanroom datasheets, and whitepapers.",
+    "doc_title": "ARGOTEX Corporate Capability & Installation Profile",
+    "doc_desc": "Overview of modular panel options, HVAC parameters, line integrations, client references, and GMP checklists (PDF file).",
+    "button": "Download Company Profile"
+  },
+  "contact": {
+    "title": "Book an Engineering Consultation",
+    "desc": "Provide your biopharmaceutical project parameters to receive a conceptual layout draft and turnkey proposal options.",
+    "first_name": "First Name *",
+    "last_name": "Last Name *",
+    "email": "Work Email *",
+    "phone": "Phone Number *",
+    "company": "Company / Factory Name *",
+    "solution": "Interested Solution *",
+    "scope": "Project Scope / Cleanroom Dimensions / Timelines (Notes)",
+    "placeholder_solution": "Please select a solution",
+    "submit": "Book an Engineering Consultation",
+    "success": "Engineering Consultation Scheduled — Thank you. Our lead system engineers will review your configuration parameters and follow up within 24 working hours.",
+    "error": "⚠️ Error saving data. Please email us directly at wasachon@axentragroup.net"
+  },
+  "footer": {
+    "banner_title": "Consult with Biopharma Design Engineers",
+    "banner_desc": "Draft modular cleanrooms parameters and custom process lines limits with senior consultants",
+    "banner_button": "Book Engineering Consultation",
+    "company_desc": "Biopharmaceutical systems integration and cleanrooms engineering operating under strict GMP, GAMP 5, and 21 CFR Part 11 standards.",
+    "compliance": "PIC/S GMP · FDA · ISO 14644 · GAMP 5 · 21 CFR Part 11",
+    "title_industries": "Industries",
+    "title_solutions": "Solutions",
+    "industries": [
+      "Pharma",
+      "Biotech & Vaccines",
+      "Medical Devices",
+      "Food",
+      "Medical Grade Cosmetics"
+    ],
+    "solutions": [
+      "Sterile Production",
+      "Solid Dosage Systems",
+      "Semi-Solid Systems",
+      "Liquid Dosage Systems",
+      "Line Connectivity & SCADA",
+      "Data Integrity & Part 11"
+    ],
+    "copyright": "© 2026 Argotex Co., Ltd. All Rights Reserved.",
+    "links": ["Privacy Policy", "Terms & Conditions"]
+  },
+  "industries": {
+    "title": "Target Industries",
+    "subtitle": "Advanced engineering solutions tailored to strict regulatory standards across core biopharma sectors.",
+    "items": [
+      { "id": "pharma", "title": "Pharmaceuticals", "desc": "High-speed formulation lines and process piping compliant with PIC/S GMP." },
+      { "id": "biotech", "title": "Biotech & Vaccines", "desc": "Bioreactor integration and advanced sterile isolation systems." },
+      { "id": "medical-device", "title": "Medical Devices", "desc": "Certified cleanroom environments for medical device assembly." },
+      { "id": "food", "title": "Nutraceuticals & Food", "desc": "Sanitary piping, blending systems, and high-temperature processing." },
+      { "id": "cosmetics", "title": "Medical-Grade Cosmetics", "desc": "Vacuum emulsifying mixers and contamination-free topical lines." }
+    ]
+  }
+}
