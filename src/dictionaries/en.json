@@ -10,7 +10,7 @@
     "contact": "Contact"
   },
   "topbar": {
-    "text": "⚡ Complete Biopharma Manufacturing Solutions — From Design to Production",
+    "text": "⚡ Total Solutions for Biopharma — Engineered for Quality, Built for Results",
     "badge": "21 CFR Part 11 Fully Compliant · ✓ GMP Certified Designs"
   },
   "cta": {
@@ -19,9 +19,9 @@
   },
   "hero": {
     "badge": "Turnkey Biopharma Production Integrator · ✓ GMP Certified Designs",
-    "tagline": "Design • Integrate • Validate — Complete Biopharma Systems",
-    "title": "Complete Turnkey Biopharma Lines — Built for Compliance, Engineered for Output",
-    "desc": "ARGOTEX integrates modular cleanroom environments, process formulation vessels, high-barrier isolator systems, secure SCADA configurations, and complete verification protocols (IQ/OQ/PQ) under PIC/S GMP directives.",
+    "tagline": "Total Solutions for Biopharma",
+    "title": "Complete Turnkey Biopharma Lines — Built for Quality and Compliance, Engineered for Output",
+    "desc": "ARGOTEX delivers total biopharma manufacturing solutions — integrating cleanroom environments, process vessels, isolator systems, and SCADA controls, all validated end-to-end (IQ/OQ/PQ) under PIC/S GMP to guarantee consistent quality and measurable production results.",
     "credit": "Founded by biopharmaceutical engineering specialists with over 50 years of cumulative international GMP experience."
   },
   "trust": {
@@ -134,7 +134,7 @@
   },
   "why": {
     "title": "Why ARGOTEX",
-    "desc": "A Complete Systems Integrator. We design, build, and support fully compliant production lines. We own the verification process rather than just selling machinery.",
+    "desc": "Total Solutions for Biopharma. We design, build, validate, and support production lines that consistently deliver on quality and results — owning the verification process rather than just selling machinery.",
     "items": [
       {
         "title": "End-to-End System",
@@ -180,16 +180,16 @@
     "banner_title": "Consult with Biopharma Design Engineers",
     "banner_desc": "Draft modular cleanrooms parameters and custom process lines limits with senior consultants",
     "banner_button": "Book Engineering Consultation",
-    "company_desc": "Biopharmaceutical systems integration and cleanrooms engineering operating under strict GMP, GAMP 5, and 21 CFR Part 11 standards.",
+    "company_desc": "Total Solutions for Biopharma — end-to-end systems integration and cleanroom engineering built for quality and results, operating under strict GMP, GAMP 5, and 21 CFR Part 11 standards.",
     "compliance": "PIC/S GMP · FDA · ISO 14644 · GAMP 5 · 21 CFR Part 11",
     "title_industries": "Industries",
     "title_solutions": "Solutions",
     "industries": [
-      "Pharma",
-      "Biotech & Vaccines",
-      "Medical Devices",
-      "Food",
-      "Medical Grade Cosmetics"
+      { "slug": "pharma", "label": "Pharma" },
+      { "slug": "biotech", "label": "Biotech & Vaccines" },
+      { "slug": "medical-device", "label": "Medical Devices" },
+      { "slug": "food", "label": "Food" },
+      { "slug": "cosmetics", "label": "Medical Grade Cosmetics" }
     ],
     "solutions": [
       "Sterile Production",

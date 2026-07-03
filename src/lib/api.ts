@@ -14,6 +14,14 @@ export interface IndustryItem {
   desc: string;
 }
 
+export interface IndustryDetail {
+  slug: string;
+  title: string;
+  description: string;
+  metaDescription: string;
+  articleBody: string;
+}
+
 export interface SolutionItem {
   id: string;
   slug: string;
@@ -66,6 +74,37 @@ export async function getDynamicIndustries(lang: 'th' | 'en'): Promise<IndustryI
   } catch (error) {
     console.error(`Error fetching industries from CMS (lang=${lang}):`, error);
     return []; // Fallback empty array so frontend doesn't crash if CMS is down
+  }
+}
+
+// 1b. Fetch a single Industry (detail page) by slug, with i18n
+export async function getIndustryBySlug(lang: 'th' | 'en', slug: string): Promise<IndustryDetail | null> {
+  try {
+    const params = localizedParams(
+      { fields: 'slug,translations.*', 'filter[slug][_eq]': slug },
+      lang
+    );
+    const res = await fetch(`${DIRECTUS_URL}/items/industries?${params}`, {
+      next: { revalidate: 3600, tags: [CMS_TAGS.industries] }
+    });
+
+    if (!res.ok) throw new Error(`Failed to fetch industry detail from CMS (status ${res.status})`);
+
+    const { data } = await res.json();
+    const item = data[0];
+    if (!item) return null;
+
+    const t = item.translations[0];
+    return {
+      slug: item.slug,
+      title: t?.title || '',
+      description: t?.description || '',
+      metaDescription: t?.meta_description || t?.description || '',
+      articleBody: t?.article_body || ''
+    };
+  } catch (error) {
+    console.error(`Error fetching industry detail from CMS (slug=${slug}, lang=${lang}):`, error);
+    return null;
   }
 }
 

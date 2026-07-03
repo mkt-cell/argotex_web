@@ -29,6 +29,11 @@ export const Hero: React.FC<HeroProps> = ({ dict, lang }) => {
               </span>
             </div>
 
+            {/* Tagline / Slogan */}
+            <p className="text-medical-teal font-bold text-xs md:text-sm uppercase tracking-wider mb-2">
+              {dict.hero.tagline}
+            </p>
+
             {/* Headline */}
             <h1 className="text-2xl md:text-3xl font-heading font-bold text-slate-800 leading-tight tracking-tight mb-4">
               {dict.hero.title}

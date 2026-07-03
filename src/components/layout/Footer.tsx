@@ -50,8 +50,12 @@ export const Footer: React.FC<FooterProps> = ({ dict, lang }) => {
         <div className="space-y-4">
           <h4 className="text-sm font-semibold text-white uppercase tracking-wider font-heading">{dict.footer.title_industries}</h4>
           <ul className="space-y-2 text-xs text-slate-400">
-            {dict.footer.industries.map((ind: string) => (
-              <li key={ind}>{ind}</li>
+            {dict.footer.industries.map((ind: { slug: string; label: string }) => (
+              <li key={ind.slug}>
+                <Link href={`/${lang}/industries/${ind.slug}`} className="hover:text-medical-teal transition-colors">
+                  {ind.label}
+                </Link>
+              </li>
             ))}
           </ul>
         </div>
