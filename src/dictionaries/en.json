@@ -21,14 +21,14 @@
     "badge": "Turnkey Biopharma Production Integrator · ✓ GMP Certified Designs",
     "tagline": "Total Solutions for Biopharma",
     "title": "Complete Turnkey Biopharma Lines — Built for Quality and Compliance, Engineered for Output",
-    "desc": "ARGOTEX delivers total biopharma manufacturing solutions — integrating cleanroom environments, process vessels, isolator systems, and SCADA controls, all validated end-to-end (IQ/OQ/PQ) under PIC/S GMP to guarantee consistent quality and measurable production results.",
+    "desc": "ARGOTEX delivers total biopharma manufacturing solutions — integrating cleanroom environments, process vessels, isolator systems, and SCADA controls, all validated end-to-end (IQ/OQ) under PIC/S GMP to guarantee consistent quality and measurable production results.",
     "credit": "Founded by biopharmaceutical engineering specialists with over 50 years of cumulative international GMP experience."
   },
   "trust": {
     "exp_value": "50+",
     "exp_label": "Cumulative Years of Biopharma Expertise — Led by senior validation & design engineers",
     "val_value": "100%",
-    "val_label": "IQ/OQ/PQ Validation Success — Zero audit failures in local & international inspections",
+    "val_label": "IQ/OQ Validation Success — Zero audit failures in local & international inspections",
     "sla_value": "24/7",
     "sla_label": "Engineering SLA Support — Dedicated hotline for plant automation & PLC diagnostics",
     "compliance_value": "21 CFR",
@@ -75,8 +75,8 @@
         "title": "Qualification & Validation",
         "subtitle": "Qualification & Validation",
         "std": "Standard: PIC/S GMP, FDA Inspection Ready",
-        "desc": "Executing detailed IQ/OQ/PQ validation protocols. We run onsite stress tests, cleanroom particle counts, and process validation to build comprehensive documentation packages for regulatory bodies.",
-        "deliverables": ["Comprehensive IQ/OQ/PQ binders", "Software validation reports", "Risk-assessment matrices (FMEA)"]
+        "desc": "Executing detailed IQ/OQ validation protocols. We run onsite stress tests, cleanroom particle counts, and process validation to build comprehensive documentation packages for regulatory bodies.",
+        "deliverables": ["Comprehensive IQ/OQ binders", "Software validation reports", "Risk-assessment matrices (FMEA)"]
       }
     ]
   },
@@ -138,7 +138,7 @@
     "items": [
       {
         "title": "End-to-End System",
-        "desc": "Comprehensive project ownership from initial CAD flow layouts to qualification binders (IQ/OQ/PQ)."
+        "desc": "Comprehensive project ownership from initial CAD flow layouts to qualification binders (IQ/OQ)."
       },
       {
         "title": "Local Engineering 24/7",
