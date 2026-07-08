@@ -54,7 +54,8 @@ export default async function IndustryDetailPage({ params }: PageProps) {
 
   if (!industry) notFound();
 
-  const photo = INDUSTRY_PHOTOS[slug];
+  const staticPhoto = INDUSTRY_PHOTOS[slug];
+  const cmsPhotoUrl = industry.photoUrl;
 
   return (
     <article className="py-16 lg:py-20">
@@ -75,7 +76,19 @@ export default async function IndustryDetailPage({ params }: PageProps) {
           {industry.description}
         </p>
 
-        {photo && (
+        {cmsPhotoUrl ? (
+          <figure className="mb-10">
+            <div className="relative w-full aspect-[16/10] rounded-xl overflow-hidden border border-slate-200">
+              <Image
+                src={cmsPhotoUrl}
+                alt={industry.title}
+                fill
+                className="object-cover"
+                priority
+              />
+            </div>
+          </figure>
+        ) : staticPhoto && (
           <figure className="mb-10">
             <div className="relative w-full aspect-[16/10] rounded-xl overflow-hidden border border-slate-200">
               <Image
@@ -87,8 +100,8 @@ export default async function IndustryDetailPage({ params }: PageProps) {
               />
             </div>
             <figcaption className="mt-2 text-[11px] text-slate-400">
-              <a href={photo.sourceUrl} target="_blank" rel="noopener noreferrer" className="hover:text-medical-teal transition-colors">
-                {photo.credit}
+              <a href={staticPhoto.sourceUrl} target="_blank" rel="noopener noreferrer" className="hover:text-medical-teal transition-colors">
+                {staticPhoto.credit}
               </a>
             </figcaption>
           </figure>

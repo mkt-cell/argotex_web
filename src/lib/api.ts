@@ -20,6 +20,7 @@ export interface IndustryDetail {
   description: string;
   metaDescription: string;
   articleBody: string;
+  photoUrl: string | null;
 }
 
 export interface SolutionItem {
@@ -81,7 +82,7 @@ export async function getDynamicIndustries(lang: 'th' | 'en'): Promise<IndustryI
 export async function getIndustryBySlug(lang: 'th' | 'en', slug: string): Promise<IndustryDetail | null> {
   try {
     const params = localizedParams(
-      { fields: 'slug,translations.*', 'filter[slug][_eq]': slug },
+      { fields: 'slug,photo,translations.*', 'filter[slug][_eq]': slug },
       lang
     );
     const res = await fetch(`${DIRECTUS_URL}/items/industries?${params}`, {
@@ -100,7 +101,8 @@ export async function getIndustryBySlug(lang: 'th' | 'en', slug: string): Promis
       title: t?.title || '',
       description: t?.description || '',
       metaDescription: t?.meta_description || t?.description || '',
-      articleBody: t?.article_body || ''
+      articleBody: t?.article_body || '',
+      photoUrl: item.photo ? `${DIRECTUS_URL}/assets/${item.photo}` : null
     };
   } catch (error) {
     console.error(`Error fetching industry detail from CMS (slug=${slug}, lang=${lang}):`, error);
