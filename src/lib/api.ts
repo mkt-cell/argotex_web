@@ -5,7 +5,8 @@ const DIRECTUS_URL = process.env.NEXT_PUBLIC_DIRECTUS_URL || 'http://localhost:8
 export const CMS_TAGS = {
   industries: 'industries',
   solutions: 'solutions',
-  projects: 'projects'
+  projects: 'projects',
+  standards: 'standards'
 } as const;
 
 export interface IndustryItem {
@@ -40,6 +41,15 @@ export interface ProjectItem {
   resultMetric: string;
   title: string;
   successStory: string;
+}
+
+export interface StandardDetail {
+  slug: string;
+  title: string;
+  metaDescription: string;
+  articleBody: string;
+  sourceName: string;
+  sourceUrl: string;
 }
 
 // Directus only filters *which items* match `filter[translations][...]` — the
@@ -166,5 +176,37 @@ export async function getDynamicProjects(lang: 'th' | 'en'): Promise<ProjectItem
   } catch (error) {
     console.error(`Error fetching projects from CMS (lang=${lang}):`, error);
     return [];
+  }
+}
+
+// 4. Fetch a single compliance Standard (article page) by slug, with i18n
+export async function getStandardBySlug(lang: 'th' | 'en', slug: string): Promise<StandardDetail | null> {
+  try {
+    const params = localizedParams(
+      { fields: 'slug,translations.*', 'filter[slug][_eq]': slug },
+      lang
+    );
+    const res = await fetch(`${DIRECTUS_URL}/items/standards?${params}`, {
+      next: { revalidate: 3600, tags: [CMS_TAGS.standards] }
+    });
+
+    if (!res.ok) throw new Error(`Failed to fetch standard detail from CMS (status ${res.status})`);
+
+    const { data } = await res.json();
+    const item = data[0];
+    if (!item) return null;
+
+    const t = item.translations[0];
+    return {
+      slug: item.slug,
+      title: t?.title || '',
+      metaDescription: t?.meta_description || '',
+      articleBody: t?.article_body || '',
+      sourceName: t?.source_name || '',
+      sourceUrl: t?.source_url || ''
+    };
+  } catch (error) {
+    console.error(`Error fetching standard detail from CMS (slug=${slug}, lang=${lang}):`, error);
+    return null;
   }
 }

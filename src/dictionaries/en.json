@@ -175,7 +175,12 @@
     "banner_desc": "Draft modular cleanrooms parameters and custom process lines limits with senior consultants",
     "banner_button": "Book Engineering Consultation",
     "company_desc": "Total Solutions for Biopharma — end-to-end systems integration and cleanroom engineering built for quality and results, operating under strict PIC/S and GMP standards.",
-    "compliance": "PIC/S GMP · FDA · ISO 14644 · 21 CFR Part 11",
+    "compliance": [
+      { "slug": "pics-gmp", "label": "PIC/S GMP" },
+      { "slug": "fda", "label": "FDA" },
+      { "slug": "iso-14644", "label": "ISO 14644" },
+      { "slug": "cfr-part-11", "label": "21 CFR Part 11" }
+    ],
     "title_industries": "Industries",
     "title_solutions": "Solutions",
     "industries": [
@@ -195,6 +200,9 @@
     ],
     "copyright": "© 2026 Argotex Co., Ltd. All Rights Reserved.",
     "links": ["Privacy Policy", "Terms & Conditions"]
+  },
+  "standards": {
+    "source_label": "Source"
   },
   "industries": {
     "title": "Target Industries",

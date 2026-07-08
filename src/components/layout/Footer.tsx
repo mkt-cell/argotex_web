@@ -37,10 +37,14 @@ export const Footer: React.FC<FooterProps> = ({ dict, lang }) => {
           <div className="pt-2">
             <p className="text-[10px] uppercase font-bold tracking-wider text-slate-400 mb-2">Compliance & Standards</p>
             <div className="flex flex-wrap gap-1.5">
-              {dict.footer.compliance.split(' · ').map((std: string) => (
-                <span key={std} className="bg-slate-700 text-slate-300 text-[9px] font-semibold px-2 py-0.5 rounded border border-slate-600">
-                  {std}
-                </span>
+              {dict.footer.compliance.map((std: { slug: string; label: string }) => (
+                <Link
+                  key={std.slug}
+                  href={`/${lang}/standards/${std.slug}`}
+                  className="bg-slate-700 text-slate-300 text-[9px] font-semibold px-2 py-0.5 rounded border border-slate-600 hover:border-medical-teal hover:text-medical-teal transition-colors"
+                >
+                  {std.label}
+                </Link>
               ))}
             </div>
           </div>
