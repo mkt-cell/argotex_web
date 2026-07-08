@@ -29,10 +29,8 @@
     "exp_label": "Cumulative Years of Biopharma Expertise — Led by senior validation & design engineers",
     "val_value": "100%",
     "val_label": "IQ/OQ Validation Success — Zero audit failures in local & international inspections",
-    "sla_value": "24/7",
-    "sla_label": "Engineering SLA Support — Dedicated hotline for plant automation & PLC diagnostics",
     "compliance_value": "21 CFR PART 11",
-    "compliance_label": "Part 11 Compliant Software — Cryptographically signed audit trails"
+    "compliance_label": "21 CFR Part 11 Compliant Software — Cryptographically signed audit trails"
   },
   "lifecycle": {
     "title": "The Biopharma Plant Delivery Journey",
@@ -43,30 +41,30 @@
         "title": "Conceptual Design & P&ID",
         "subtitle": "Conceptual Design & P&ID",
         "std": "Standard: GMP – WHO & PIC/S",
-        "desc": "We draft compliance layout flows for HVAC systems, materials, and operators using advanced 3D simulations. Developing initial P&ID diagrams ensuring early validation mapping.",
-        "deliverables": ["Conceptual 3D Layouts", "Material & Personnel Flows", "P&ID Process Diagrams"]
+        "desc": "We draft compliance layout flows for HVAC systems, materials, and operators using 2D layout diagrams. Developing initial P&ID diagrams ensuring early validation mapping.",
+        "deliverables": ["Conceptual 2D Layouts", "Material & Personnel Flows", "P&ID Process Diagrams"]
       },
       {
         "num": "2",
         "title": "Modular Cleanroom & HVAC Build",
         "subtitle": "Modular Cleanroom & HVAC Build",
-        "std": "Standard: ISO 14644-1, EU GMP Grade A-D",
+        "std": "Standard: ISO 14644-1, GMP Grade A-D",
         "desc": "Installation of modular, non-shedding cleanroom wall panels and ceiling systems. Integrating custom AHUs with HEPA filtration to maintain precise temperature, humidity, and differential pressures.",
         "deliverables": ["Modular cleanroom wall structures", "Digital air pressure panels", "HEPA Terminal Filter setups"]
       },
       {
         "num": "3",
-        "title": "Process Integration & Piping",
-        "subtitle": "Process Integration & Piping",
+        "title": "Process Integration",
+        "subtitle": "Process Integration",
         "std": "Standard: ASME BPE Standards",
-        "desc": "Integrating high-speed aseptic filling systems, isolator barriers, and preparation tanks. Specialized piping network build utilizing mirror-finish 316L stainless steel and clean sanitary valves.",
-        "deliverables": ["Argon automated orbital welding", "Jacketed preparation skids", "CIP/SIP automated validation loops"]
+        "desc": "Connecting machinery and equipment across the production line so it runs as one seamless system — reducing handoff delays between stages and helping customers keep production continuous and on target for their output goals.",
+        "deliverables": ["Line-wide machine connectivity layout", "Automated inter-machine material conveyance", "Full-line interoperability commissioning test"]
       },
       {
         "num": "4",
-        "title": "Automation, SCADA & CSV",
-        "subtitle": "Automation, SCADA & CSV",
-        "std": "Standard: GAMP 5, FDA 21 CFR Part 11",
+        "title": "SCADA",
+        "subtitle": "SCADA",
+        "std": "Standard: FDA 21 CFR Part 11",
         "desc": "Software calibration and SCADA development. We engineer central control panels under strict computer software validation (CSV) rules, ensuring every recipe change is authorized, signed, and tracked.",
         "deliverables": ["FDA Part 11 secure audit trails", "SCADA dashboard integration", "Biometric / secure PIN logic"]
       },
@@ -74,8 +72,8 @@
         "num": "5",
         "title": "Qualification & Validation",
         "subtitle": "Qualification & Validation",
-        "std": "Standard: PIC/S GMP, FDA Inspection Ready",
-        "desc": "Executing detailed IQ/OQ validation protocols. We run onsite stress tests, cleanroom particle counts, and process validation to build comprehensive documentation packages for regulatory bodies.",
+        "std": "Standard: PIC/S GMP",
+        "desc": "Executing detailed IQ/OQ validation protocols to confirm the production line's installation and operation meet requirements.",
         "deliverables": ["Comprehensive IQ/OQ binders", "Software validation reports", "Risk-assessment matrices (FMEA)"]
       }
     ]
@@ -89,19 +87,19 @@
         "title": "Sterile Production",
         "subtitle": "Sterile Production",
         "badge": "Grade A Aseptic Filling & Isolators",
-        "desc": "Turnkey design of high-speed sterile filling lines, isolation barriers (Isolator), and sterilization tunnels utilizing VHP decontamination loop cycles to guarantee absolute sterility and particulate control.",
-        "specs": "Aseptic filling lines and isolation barriers with VHP sterilization tunnels.",
-        "features": ["Barrier Isolator Systems", "Automated VHP cycle disinfection", "Non-contact peristaltic fill pumps"],
+        "desc": "Turnkey design of high-speed sterile filling lines and isolation barriers (Isolator) to guarantee absolute sterility and particulate control.",
+        "specs": "Aseptic filling lines and isolation barriers (Isolator).",
+        "features": ["Barrier Isolator Systems", "Non-contact peristaltic fill pumps"],
         "products": ["Vaccines", "Injectables", "Ophthalmics", "Sterile Dry Powders"]
       },
       {
         "id": "solid",
         "title": "Solid Dosage",
         "subtitle": "Solid Dosage",
-        "badge": "Continuous Compression & Coating",
-        "desc": "High-yield tablet press lines with closed weight feedback loop controls, capsule filling units, and continuous coating lines. Designed with dust extraction containment systems.",
-        "specs": "High-yield tablet press lines with weight feedback loop controls and dust containment.",
-        "features": ["100% tablet weight control systems", "Capsule filling for powder/pellets", "Continuous coating lines"],
+        "badge": "Compression & Coating",
+        "desc": "High-yield tablet press lines with closed weight feedback loop controls, capsule filling units, and coating lines. Designed with dust extraction containment systems.",
+        "specs": "High-yield tablet press lines with weight feedback loop controls and dust containment. Packing system.",
+        "features": ["100% tablet weight control systems", "Capsule filling for powder/pellets", "Coating lines"],
         "products": ["Tablets", "Capsules", "Coated Caplets", "Bi-layer Tablets"]
       },
       {
@@ -111,7 +109,7 @@
         "badge": "Vacuum Emulsification & Tubes",
         "desc": "Vacuum homogenizing emulsifier vessels for fine ointment blending, preventing air pocket bubbles. Integrated with automated pharmaceutical tube filling and crimp sealing systems.",
         "specs": "Vacuum homogenizing emulsifiers and tube filling machines.",
-        "features": ["Vacuum Homogenizer mix vessels", "Automated tube seal & print coding", "CIP sanitizing loops"],
+        "features": ["Vacuum Homogenizer mix vessels", "Automated cream tube filling", "CIP sanitizing loops"],
         "products": ["Creams", "Ointments", "Medical Gels", "Suppositories"]
       },
       {
@@ -134,28 +132,24 @@
   },
   "why": {
     "title": "Why ARGOTEX",
-    "desc": "Total Solutions for Biopharma. We design, build, validate, and support production lines that consistently deliver on quality and results — owning the verification process rather than just selling machinery.",
+    "desc": "Total Solutions for Biopharma. We design, build, and validate production lines to deliver quality and measurable results — owning the verification process rather than just selling machinery.",
     "items": [
       {
         "title": "End-to-End System",
-        "desc": "Comprehensive project ownership from initial CAD flow layouts to qualification binders (IQ/OQ)."
+        "desc": "We design and build the cleanroom, then source and install the production machinery — through to IQ/OQ commissioning."
       },
       {
-        "title": "Local Engineering 24/7",
-        "desc": "Experienced in-country technical team available for scheduled service SLA and PLC emergency modifications."
+        "title": "Global Standards",
+        "desc": "Our processes comply with PIC/S and GMP standards."
       },
       {
-        "title": "Global FDA & GMP Standards",
-        "desc": "Our software designs and panel overrides comply with FDA 21 CFR Part 11, GAMP 5, and EU Annex 1."
-      },
-      {
-        "title": "Uptime Support Lifecycle",
-        "desc": "Custom calibration scheduling and preventive maintenance to optimize Overall Equipment Effectiveness (OEE)."
+        "title": "After Sales Service",
+        "desc": "Custom calibration scheduling and preventive maintenance contracts."
       }
     ]
   },
   "downloads": {
-    "title": "Downloads & Technical Resources",
+    "title": "Downloads Document",
     "desc": "Access detailed catalogs, product brochures, modular cleanroom datasheets, and whitepapers.",
     "doc_title": "ARGOTEX Corporate Capability & Installation Profile",
     "doc_desc": "Overview of modular panel options, HVAC parameters, line integrations, client references, and GMP checklists (PDF file).",
@@ -180,13 +174,13 @@
     "banner_title": "Consult with Biopharma Design Engineers",
     "banner_desc": "Draft modular cleanrooms parameters and custom process lines limits with senior consultants",
     "banner_button": "Book Engineering Consultation",
-    "company_desc": "Total Solutions for Biopharma — end-to-end systems integration and cleanroom engineering built for quality and results, operating under strict GMP, GAMP 5, and 21 CFR Part 11 standards.",
+    "company_desc": "Total Solutions for Biopharma — end-to-end systems integration and cleanroom engineering built for quality and results, operating under strict PIC/S and GMP standards.",
     "compliance": "PIC/S GMP · FDA · ISO 14644 · GAMP 5 · 21 CFR Part 11",
     "title_industries": "Industries",
     "title_solutions": "Solutions",
     "industries": [
       { "slug": "pharma", "label": "Pharma" },
-      { "slug": "biotech", "label": "Biotech & Vaccines" },
+      { "slug": "biotech", "label": "Biotech" },
       { "slug": "medical-device", "label": "Medical Devices" },
       { "slug": "food", "label": "Food" },
       { "slug": "cosmetics", "label": "Medical Grade Cosmetics" }
@@ -197,20 +191,20 @@
       "Semi-Solid Systems",
       "Liquid Dosage Systems",
       "Line Connectivity & SCADA",
-      "Data Integrity & Part 11"
+      "Data Integrity & 21 CFR Part 11"
     ],
     "copyright": "© 2026 Argotex Co., Ltd. All Rights Reserved.",
     "links": ["Privacy Policy", "Terms & Conditions"]
   },
   "industries": {
     "title": "Target Industries",
-    "subtitle": "Advanced engineering solutions tailored to strict regulatory standards across core biopharma sectors.",
+    "subtitle": "Advanced engineering solutions tailored to strict regulatory standards across the pharmaceutical, biological, and medical services industries.",
     "items": [
       { "id": "pharma", "title": "Pharmaceuticals", "desc": "High-speed formulation lines and process piping compliant with PIC/S GMP." },
-      { "id": "biotech", "title": "Biotech & Vaccines", "desc": "Bioreactor integration and advanced sterile isolation systems." },
-      { "id": "medical-device", "title": "Medical Devices", "desc": "Certified cleanroom environments for medical device assembly." },
+      { "id": "biotech", "title": "Biotech", "desc": "Advanced sterile isolation and filling systems." },
+      { "id": "medical-device", "title": "Medical Devices", "desc": "Certified cleanroom environments for medical device manufacturing." },
       { "id": "food", "title": "Nutraceuticals & Food Processing Environment", "desc": "Capsule/tablet blending-filling lines for nutraceuticals, paired with sanitary stainless piping and high-heat sterilization systems." },
-      { "id": "cosmetics", "title": "Medical-Grade Cosmetics", "desc": "Vacuum emulsifying mixers and contamination-free topical lines." }
+      { "id": "cosmetics", "title": "Medical-Grade Cosmetics", "desc": "Emulsifying mixers and contamination-free topical lines." }
     ]
   }
 }

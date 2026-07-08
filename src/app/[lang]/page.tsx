@@ -5,19 +5,18 @@ import { Badge } from '@/components/ui/Badge';
 import { Button } from '@/components/ui/Button';
 import { ContactForm } from '@/components/home/ContactForm';
 import { IndustriesSection } from '@/components/sections/IndustriesSection';
-import { ProjectsSection } from '@/components/sections/ProjectsSection';
 import { Hero } from '@/components/sections/Hero';
-import { getDynamicIndustries, getDynamicSolutions, getDynamicProjects } from '@/lib/api';
-import { 
-  Award, 
-  CheckCircle2, 
-  Clock, 
-  Cpu, 
-  Download, 
-  FileDown, 
-  FileText, 
-  ShieldCheck, 
-  Users, 
+import { getDynamicIndustries, getDynamicSolutions } from '@/lib/api';
+import {
+  Award,
+  CheckCircle2,
+  Clock,
+  Cpu,
+  Download,
+  FileDown,
+  FileText,
+  ShieldCheck,
+  Users,
   ArrowRight,
   TrendingUp,
   Settings,
@@ -51,10 +50,9 @@ interface SolutionCopy {
 export default async function Page({ params }: PageProps) {
   const { lang } = await params;
   const dict = await getDictionary(lang as Locale);
-  const [cmsIndustries, cmsSolutions, cmsProjects] = await Promise.all([
+  const [cmsIndustries, cmsSolutions] = await Promise.all([
     getDynamicIndustries(lang as 'th' | 'en'),
-    getDynamicSolutions(lang as 'th' | 'en'),
-    getDynamicProjects(lang as 'th' | 'en')
+    getDynamicSolutions(lang as 'th' | 'en')
   ]);
   const industriesDict = {
     ...dict.industries,
@@ -258,9 +256,6 @@ export default async function Page({ params }: PageProps) {
         </div>
       </section>
 
-      {/* Featured Case Studies (CMS-driven) */}
-      <ProjectsSection projects={cmsProjects} dict={dict.projects} />
-
       {/* 5. Why Argotex Section */}
       <section className="py-20 lg:py-24 border-b border-slate-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
@@ -275,11 +270,10 @@ export default async function Page({ params }: PageProps) {
           </div>
 
           {/* Cards Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {dict.why.items.map((item: any, idx: number) => {
               const icons = [
                 <Award key="aw" className="h-6 w-6 text-medical-teal" />,
-                <Users key="us" className="h-6 w-6 text-medical-teal" />,
                 <ShieldCheck key="sc" className="h-6 w-6 text-medical-teal" />,
                 <Clock key="cl" className="h-6 w-6 text-medical-teal" />
               ];
@@ -352,16 +346,6 @@ export default async function Page({ params }: PageProps) {
                 {dict.contact.desc}
               </p>
               
-              <div className="space-y-4 pt-4 border-t border-slate-200">
-                <div className="flex gap-3 text-xs text-slate-600">
-                  <span className="font-bold text-medical-teal">SLA RESPONSE TIME:</span>
-                  <span>Senior system engineers reply within 4 business hours.</span>
-                </div>
-                <div className="flex gap-3 text-xs text-slate-600">
-                  <span className="font-bold text-medical-teal">INTEGRITY COMPLIANCE:</span>
-                  <span>Data submitted is logged securely in compliance with ALCOA+ principles.</span>
-                </div>
-              </div>
             </div>
 
             {/* Form Column */}
