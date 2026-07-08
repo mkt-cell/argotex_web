@@ -82,7 +82,6 @@ export default async function Page({ params }: PageProps) {
   const trustIcons = [
     <Users key="users" className="h-6 w-6 text-medical-teal" />,
     <CheckCircle2 key="check" className="h-6 w-6 text-medical-teal" />,
-    <Clock key="clock" className="h-6 w-6 text-medical-teal" />,
     <Cpu key="cpu" className="h-6 w-6 text-medical-teal" />
   ];
 
@@ -102,11 +101,10 @@ export default async function Page({ params }: PageProps) {
       {/* 2. Trust Metrics Section */}
       <section className="bg-white py-12 border-b border-slate-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
               { val: dict.trust.exp_value, lbl: dict.trust.exp_label },
               { val: dict.trust.val_value, lbl: dict.trust.val_label },
-              { val: dict.trust.sla_value, lbl: dict.trust.sla_label },
               { val: dict.trust.compliance_value, lbl: dict.trust.compliance_label }
             ].map((metric, i) => (
               <div key={metric.val} className="flex gap-4 p-4 items-start">

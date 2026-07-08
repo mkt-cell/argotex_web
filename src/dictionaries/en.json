@@ -31,7 +31,7 @@
     "val_label": "IQ/OQ Validation Success — Zero audit failures in local & international inspections",
     "sla_value": "24/7",
     "sla_label": "Engineering SLA Support — Dedicated hotline for plant automation & PLC diagnostics",
-    "compliance_value": "21 CFR",
+    "compliance_value": "21 CFR PART 11",
     "compliance_label": "Part 11 Compliant Software — Cryptographically signed audit trails"
   },
   "lifecycle": {
@@ -209,7 +209,7 @@
       { "id": "pharma", "title": "Pharmaceuticals", "desc": "High-speed formulation lines and process piping compliant with PIC/S GMP." },
       { "id": "biotech", "title": "Biotech & Vaccines", "desc": "Bioreactor integration and advanced sterile isolation systems." },
       { "id": "medical-device", "title": "Medical Devices", "desc": "Certified cleanroom environments for medical device assembly." },
-      { "id": "food", "title": "Nutraceuticals & Food", "desc": "Sanitary piping, blending systems, and high-temperature processing." },
+      { "id": "food", "title": "Nutraceuticals & Food Processing Environment", "desc": "Capsule/tablet blending-filling lines for nutraceuticals, paired with sanitary stainless piping and high-heat sterilization systems." },
       { "id": "cosmetics", "title": "Medical-Grade Cosmetics", "desc": "Vacuum emulsifying mixers and contamination-free topical lines." }
     ]
   }
