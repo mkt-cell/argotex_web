@@ -187,16 +187,14 @@
       { "slug": "pharma", "label": "ยาแผนปัจจุบัน / Pharma" },
       { "slug": "biotech", "label": "ยา ชีววัตถุ / Biotech" },
       { "slug": "medical-device", "label": "เครื่องมือแพทย์ / Medical Device" },
-      { "slug": "food", "label": "อาหารและเสริมอาหาร / Food" },
+      { "slug": "food", "label": "ผลิตภัณฑ์เสริมอาหารและอาหาร / Nutraceuticals & Food Processing Environment" },
       { "slug": "cosmetics", "label": "เครื่องสำอางเกรดการแพทย์ / Cosmetics" }
     ],
     "solutions": [
       "Sterile Production",
-      "Solid Dosage Systems",
-      "Semi-Solid Systems",
-      "Liquid Dosage Systems",
-      "Line Connectivity & SCADA",
-      "Data Integrity & 21 CFR Part 11"
+      "Solid Dosage",
+      "Semi-Solid Dosage",
+      "Liquid Dosage"
     ],
     "copyright": "© 2026 Argotex Co., Ltd. All Rights Reserved.",
     "links": [
