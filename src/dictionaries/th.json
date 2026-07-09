@@ -187,7 +187,7 @@
       { "slug": "pharma", "label": "ยาแผนปัจจุบัน / Pharma" },
       { "slug": "biotech", "label": "ยา ชีววัตถุ / Biotech" },
       { "slug": "medical-device", "label": "เครื่องมือแพทย์ / Medical Device" },
-      { "slug": "food", "label": "ผลิตภัณฑ์เสริมอาหารและอาหาร / Nutraceuticals & Food Processing Environment" },
+      { "slug": "food", "label": "ผลิตภัณฑ์เสริมอาหารและอาหาร / Nutraceuticals & Food" },
       { "slug": "cosmetics", "label": "เครื่องสำอางเกรดการแพทย์ / Cosmetics" }
     ],
     "solutions": [
@@ -226,7 +226,7 @@
       { "id": "pharma", "title": "ยาแผนปัจจุบัน / Pharma", "desc": "สายการผลิตยาความเร็วสูงและระบบเตรียมผสมตามมาตรฐาน PIC/S GMP" },
       { "id": "biotech", "title": "ยา ชีววัตถุ / Biotech", "desc": "ไลน์บรรจุปลอดเชื้อระดับสูง" },
       { "id": "medical-device", "title": "เครื่องมือแพทย์ / Medical Device", "desc": "ห้องคลีนรูมสำหรับการผลิตเครื่องมือแพทย์" },
-      { "id": "food", "title": "ผลิตภัณฑ์เสริมอาหารและอาหาร / Nutraceuticals & Food Processing Environment", "desc": "ระบบผสมและบรรจุแคปซูล/เม็ดผลิตภัณฑ์เสริมอาหาร ควบคู่กับสายท่อสแตนเลสเกรดอาหารและระบบฆ่าเชื้อด้วยความร้อนสูง" },
+      { "id": "food", "title": "ผลิตภัณฑ์เสริมอาหารและอาหาร / Nutraceuticals & Food", "desc": "ระบบผสมและบรรจุแคปซูล/เม็ดผลิตภัณฑ์เสริมอาหาร ควบคู่กับสายท่อสแตนเลสเกรดอาหารและระบบฆ่าเชื้อด้วยความร้อนสูง" },
       { "id": "cosmetics", "title": "เครื่องสำอางเกรดการแพทย์ / Cosmetics", "desc": "ระบบผสมครีมและของเหลว ปราศจากการปนเปื้อน" }
     ]
   }

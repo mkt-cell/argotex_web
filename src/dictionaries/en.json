@@ -187,7 +187,7 @@
       { "slug": "pharma", "label": "Pharmaceuticals" },
       { "slug": "biotech", "label": "Biotech" },
       { "slug": "medical-device", "label": "Medical Devices" },
-      { "slug": "food", "label": "Nutraceuticals & Food Processing Environment" },
+      { "slug": "food", "label": "Nutraceuticals & Food" },
       { "slug": "cosmetics", "label": "Medical-Grade Cosmetics" }
     ],
     "solutions": [
@@ -226,7 +226,7 @@
       { "id": "pharma", "title": "Pharmaceuticals", "desc": "High-speed formulation lines and process piping compliant with PIC/S GMP." },
       { "id": "biotech", "title": "Biotech", "desc": "Advanced sterile isolation and filling systems." },
       { "id": "medical-device", "title": "Medical Devices", "desc": "Certified cleanroom environments for medical device manufacturing." },
-      { "id": "food", "title": "Nutraceuticals & Food Processing Environment", "desc": "Capsule/tablet blending-filling lines for nutraceuticals, paired with sanitary stainless piping and high-heat sterilization systems." },
+      { "id": "food", "title": "Nutraceuticals & Food", "desc": "Capsule/tablet blending-filling lines for nutraceuticals, paired with sanitary stainless piping and high-heat sterilization systems." },
       { "id": "cosmetics", "title": "Medical-Grade Cosmetics", "desc": "Emulsifying mixers and contamination-free topical lines." }
     ]
   }
