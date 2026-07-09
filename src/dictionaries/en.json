@@ -199,10 +199,27 @@
       "Data Integrity & 21 CFR Part 11"
     ],
     "copyright": "© 2026 Argotex Co., Ltd. All Rights Reserved.",
-    "links": ["Privacy Policy", "Terms & Conditions"]
+    "links": [
+      { "slug": "privacy-policy", "label": "Privacy Policy" },
+      { "slug": "terms-conditions", "label": "Terms & Conditions" }
+    ]
   },
   "standards": {
     "source_label": "Source"
+  },
+  "legal": {
+    "updated_label": "Last updated",
+    "updated_date": "July 9, 2026",
+    "privacy": {
+      "title": "Privacy Policy",
+      "meta_description": "Argotex Co., Ltd.'s privacy policy — how we collect, use, and protect your personal data under Thailand's Personal Data Protection Act (PDPA).",
+      "body": "<h2>Information We Collect</h2><p>When you submit the contact form on this website, we collect your full name, work email, phone number, company/factory name, the solution or service you're interested in, and the project scope details you provide.</p><h2>How We Use Your Information</h2><p>We use this information to respond to your inquiry and provide the engineering consultation requested, to prepare a preliminary project proposal, and to improve the quality of our services.</p><h2>Data Storage and Security</h2><p>Your information is stored securely in an encrypted database and is accessible only to team members involved in following up on your request.</p><h2>Disclosure to Third Parties</h2><p>We do not sell or rent your personal information to third parties, except where necessary to deliver our services, such as internal lead-routing to our sales team, or as required by law.</p><h2>Your Rights</h2><p>Under Thailand's Personal Data Protection Act B.E. 2562 (2019) (PDPA), you have the right to access, correct, delete, or withdraw consent for the use of your personal data at any time by contacting us using the details below.</p><h2>Contact</h2><p>For questions about this Privacy Policy, contact us at <a href=\"mailto:wasachon@axentragroup.net\">wasachon@axentragroup.net</a></p>"
+    },
+    "terms": {
+      "title": "Terms & Conditions",
+      "meta_description": "Terms and conditions for using the Argotex Co., Ltd. website.",
+      "body": "<h2>Acceptance of Terms</h2><p>By accessing this website, you agree to be bound by these Terms & Conditions in full.</p><h2>Use of Website Content</h2><p>All content, images, and technical information on this website are the property of Argotex Co., Ltd. Reproduction or distribution without written permission is prohibited.</p><h2>Accuracy of Information</h2><p>We strive to keep the information on this website accurate and up to date, but we do not guarantee its completeness or accuracy. Final project specifications are determined through direct consultation with our engineering team.</p><h2>Limitation of Liability</h2><p>Argotex Co., Ltd. is not liable for any damages arising from use of information on this website without direct consultation or confirmation from our engineering team.</p><h2>Links to External Websites</h2><p>This website may contain links to third-party websites, such as international standards bodies. We have no control over, and assume no responsibility for, the content of those websites.</p><h2>Changes to These Terms</h2><p>We reserve the right to update or modify these Terms & Conditions at any time without prior notice.</p><h2>Governing Law</h2><p>These Terms & Conditions are governed by the laws of Thailand.</p>"
+    }
   },
   "industries": {
     "title": "Target Industries",

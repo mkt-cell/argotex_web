@@ -110,10 +110,10 @@ export const Footer: React.FC<FooterProps> = ({ dict, lang }) => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row justify-between items-center gap-4">
           <p>{dict.footer.copyright}</p>
           <div className="flex gap-4">
-            {dict.footer.links.map((linkName: string) => (
-              <a key={linkName} href="#" className="hover:text-slate-300 transition-colors">
-                {linkName}
-              </a>
+            {dict.footer.links.map((link: { slug: string; label: string }) => (
+              <Link key={link.slug} href={`/${lang}/${link.slug}`} className="hover:text-slate-300 transition-colors">
+                {link.label}
+              </Link>
             ))}
           </div>
         </div>
