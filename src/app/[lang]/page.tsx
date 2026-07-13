@@ -91,10 +91,41 @@ export default async function Page({ params }: PageProps) {
     liquid: <Cpu className="h-8 w-8 text-medical-teal" />
   };
 
+  // Small icon set for the quick-glance capabilities strip below the Hero
+  const quickSolutionIcons: Record<string, React.ReactNode> = {
+    sterile: <ShieldCheck className="h-5 w-5 text-medical-teal" />,
+    solid: <TrendingUp className="h-5 w-5 text-medical-teal" />,
+    semisolid: <Settings className="h-5 w-5 text-medical-teal" />,
+    liquid: <Cpu className="h-5 w-5 text-medical-teal" />
+  };
+
   return (
     <div className="font-sans antialiased text-slate-800 bg-slate-50">
       {/* 1. Hero Section */}
       <Hero dict={dict} lang={lang} />
+
+      {/* 1b. Quick-glance capabilities strip — signals all 4 solution formats above the fold */}
+      <section className="bg-white border-b border-slate-200">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+          <div className="flex flex-col sm:flex-row items-center gap-3 sm:gap-6">
+            <p className="text-[10px] uppercase font-bold tracking-wider text-slate-400 whitespace-nowrap">
+              {dict.hero.capabilities_label}
+            </p>
+            <div className="flex flex-wrap justify-center sm:justify-start gap-2 sm:gap-3 w-full">
+              {solutionsDict.items.map((item: SolutionCopy) => (
+                <Link
+                  key={item.id}
+                  href={`/${lang}#solutions`}
+                  className="flex items-center gap-2 px-3 py-1.5 rounded-full border border-slate-200 hover:border-medical-teal hover:bg-medical-teal/5 transition-colors"
+                >
+                  {quickSolutionIcons[item.id]}
+                  <span className="text-xs font-semibold text-slate-600 whitespace-nowrap">{item.subtitle}</span>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* 2. Trust Metrics Section */}
       <section className="bg-white py-12 border-b border-slate-200">
