@@ -79,7 +79,7 @@
     ]
   },
   "solutions": {
-    "title": "Core Integration Solutions",
+    "title": "Production Line Engineering Solutions",
     "desc": "Explore our turnkey solid, liquid, and semi-solid formulations systems integrated for sterile GMP environments.",
     "items": [
       {
@@ -156,7 +156,7 @@
     "button": "Download Company Profile"
   },
   "contact": {
-    "title": "Book an Engineering Consultation",
+    "title": "Consultation Engineering",
     "desc": "Provide your biopharmaceutical project parameters to receive a conceptual layout draft and turnkey proposal options.",
     "first_name": "First Name *",
     "last_name": "Last Name *",
@@ -226,7 +226,7 @@
       { "id": "pharma", "title": "Pharmaceuticals", "desc": "High-speed formulation lines and process piping compliant with PIC/S GMP." },
       { "id": "biotech", "title": "Biotech", "desc": "Advanced sterile isolation and filling systems." },
       { "id": "medical-device", "title": "Medical Devices", "desc": "Certified cleanroom environments for medical device manufacturing." },
-      { "id": "food", "title": "Nutraceuticals & Food", "desc": "Capsule/tablet blending-filling lines for nutraceuticals, paired with sanitary stainless piping and high-heat sterilization systems." },
+      { "id": "food", "title": "Nutraceuticals & Food", "desc": "Capsule/tablet blending-filling lines for nutraceuticals, paired with sanitary stainless piping." },
       { "id": "cosmetics", "title": "Medical-Grade Cosmetics", "desc": "Emulsifying mixers and contamination-free topical lines." }
     ]
   }
