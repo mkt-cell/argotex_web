@@ -18,9 +18,11 @@ import {
   ShieldCheck,
   Users,
   ArrowRight,
-  TrendingUp,
-  Settings,
-  Check
+  Check,
+  Syringe,
+  PillBottle,
+  Container,
+  BottleWine
 } from 'lucide-react';
 import Link from 'next/link';
 
@@ -85,18 +87,18 @@ export default async function Page({ params }: PageProps) {
 
   // Icon mapping for Solutions
   const solutionIcons = {
-    sterile: <ShieldCheck className="h-8 w-8 text-medical-teal" />,
-    solid: <TrendingUp className="h-8 w-8 text-medical-teal" />,
-    semisolid: <Settings className="h-8 w-8 text-medical-teal" />,
-    liquid: <Cpu className="h-8 w-8 text-medical-teal" />
+    sterile: <Syringe className="h-8 w-8 text-medical-teal" />,
+    solid: <PillBottle className="h-8 w-8 text-medical-teal" />,
+    semisolid: <Container className="h-8 w-8 text-medical-teal" />,
+    liquid: <BottleWine className="h-8 w-8 text-medical-teal" />
   };
 
   // Small icon set for the quick-glance capabilities strip below the Hero
   const quickSolutionIcons: Record<string, React.ReactNode> = {
-    sterile: <ShieldCheck className="h-5 w-5 text-medical-teal" />,
-    solid: <TrendingUp className="h-5 w-5 text-medical-teal" />,
-    semisolid: <Settings className="h-5 w-5 text-medical-teal" />,
-    liquid: <Cpu className="h-5 w-5 text-medical-teal" />
+    sterile: <Syringe className="h-5 w-5 text-medical-teal" />,
+    solid: <PillBottle className="h-5 w-5 text-medical-teal" />,
+    semisolid: <Container className="h-5 w-5 text-medical-teal" />,
+    liquid: <BottleWine className="h-5 w-5 text-medical-teal" />
   };
 
   return (
