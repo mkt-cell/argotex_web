@@ -62,8 +62,8 @@
       },
       {
         "num": "4",
-        "title": "SCADA",
-        "subtitle": "SCADA",
+        "title": "Upgrade Computer Data Control System",
+        "subtitle": "21 CFR Part 11",
         "std": "Standard: FDA 21 CFR Part 11",
         "desc": "We upgrade the client's existing PLC and SCADA control software (CSV) to meet FDA 21 CFR Part 11 data integrity requirements, with tamper-proof audit trails for every recipe change.",
         "deliverables": ["FDA Part 11 secure audit trails", "OPC UA system connectivity", "Biometric / secure PIN logic"]
