@@ -65,8 +65,8 @@
         "title": "SCADA",
         "subtitle": "SCADA",
         "std": "Standard: FDA 21 CFR Part 11",
-        "desc": "Software calibration and SCADA development. We engineer central control panels under strict computer software validation (CSV) rules, ensuring every recipe change is authorized, signed, and tracked.",
-        "deliverables": ["FDA Part 11 secure audit trails", "SCADA dashboard integration", "Biometric / secure PIN logic"]
+        "desc": "We upgrade the client's existing PLC and SCADA control software (CSV) to meet FDA 21 CFR Part 11 data integrity requirements, with tamper-proof audit trails for every recipe change.",
+        "deliverables": ["FDA Part 11 secure audit trails", "OPC UA system connectivity", "Biometric / secure PIN logic"]
       },
       {
         "num": "5",
