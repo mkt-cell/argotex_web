@@ -4,6 +4,7 @@ import { Card } from '@/components/ui/Card';
 import { Badge } from '@/components/ui/Badge';
 import { Button } from '@/components/ui/Button';
 import { ContactForm } from '@/components/home/ContactForm';
+import { CatalogDownloadModal } from '@/components/home/CatalogDownloadModal';
 import { IndustriesSection } from '@/components/sections/IndustriesSection';
 import { Hero } from '@/components/sections/Hero';
 import { getDynamicIndustries, getDynamicSolutions } from '@/lib/api';
@@ -12,7 +13,6 @@ import {
   CheckCircle2,
   Clock,
   Cpu,
-  Download,
   FileDown,
   FileText,
   ShieldCheck,
@@ -356,12 +356,7 @@ export default async function Page({ params }: PageProps) {
               </div>
             </div>
             
-            <Link href={`/${lang}#contact`}>
-              <Button variant="primary" className="whitespace-nowrap font-bold flex gap-2 shadow-lg cursor-pointer">
-                <Download className="h-4 w-4" />
-                {dict.downloads.button}
-              </Button>
-            </Link>
+            <CatalogDownloadModal dict={dict} />
           </div>
         </div>
       </section>

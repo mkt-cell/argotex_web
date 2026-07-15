@@ -10,30 +10,8 @@ interface PageProps {
   params: Promise<{ lang: string; slug: string }>;
 }
 
-// Final-product photos for each industry, sourced from Wikimedia Commons under
-// CC BY / CC BY-SA licenses. Attribution is required by those licenses.
-const INDUSTRY_PHOTOS: Record<string, { credit: string; sourceUrl: string }> = {
-  pharma: {
-    credit: 'Photo: Tomino de WS / Wikimedia Commons, CC BY-SA 4.0 (cropped)',
-    sourceUrl: 'https://commons.wikimedia.org/wiki/File:Meloxicam_15_mg_tbl.jpg'
-  },
-  biotech: {
-    credit: 'Photo: Hamed Jafarnejad / Wikimedia Commons, CC BY 4.0',
-    sourceUrl: 'https://commons.wikimedia.org/wiki/File:COVIran_Barekat_vaccine_production_01.jpg'
-  },
-  'medical-device': {
-    credit: 'Photo: FNDE / Wikimedia Commons, CC BY-SA 4.0',
-    sourceUrl: 'https://commons.wikimedia.org/wiki/File:Einwegspritze-2.jpg'
-  },
-  food: {
-    credit: 'Photo: Jernej Furman / Wikimedia Commons, CC BY 2.0',
-    sourceUrl: 'https://commons.wikimedia.org/wiki/File:Omega_3_capsules_in_white_bottle_(52715127894).jpg'
-  },
-  cosmetics: {
-    credit: 'Photo: Benff / Wikimedia Commons, CC BY-SA 4.0',
-    sourceUrl: 'https://commons.wikimedia.org/wiki/File:Day_cream_02.jpg'
-  }
-};
+// Industries with a local final-product photo in /public/industries.
+const INDUSTRY_PHOTO_SLUGS = ['pharma', 'biotech', 'medical-device', 'food', 'cosmetics'];
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { lang, slug } = await params;
@@ -54,7 +32,7 @@ export default async function IndustryDetailPage({ params }: PageProps) {
 
   if (!industry) notFound();
 
-  const staticPhoto = INDUSTRY_PHOTOS[slug];
+  const hasStaticPhoto = INDUSTRY_PHOTO_SLUGS.includes(slug);
   const cmsPhotoUrl = industry.photoUrl;
 
   return (
@@ -88,7 +66,7 @@ export default async function IndustryDetailPage({ params }: PageProps) {
               />
             </div>
           </figure>
-        ) : staticPhoto && (
+        ) : hasStaticPhoto && (
           <figure className="mb-10">
             <div className="relative w-full aspect-[16/10] rounded-xl overflow-hidden border border-slate-200">
               <Image
@@ -99,11 +77,6 @@ export default async function IndustryDetailPage({ params }: PageProps) {
                 priority
               />
             </div>
-            <figcaption className="mt-2 text-[11px] text-slate-400">
-              <a href={staticPhoto.sourceUrl} target="_blank" rel="noopener noreferrer" className="hover:text-medical-teal transition-colors">
-                {staticPhoto.credit}
-              </a>
-            </figcaption>
           </figure>
         )}
 

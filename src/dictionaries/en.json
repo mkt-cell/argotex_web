@@ -14,7 +14,7 @@
     "badge": "21 CFR Part 11 Fully Compliant · ✓ GMP Certified Designs"
   },
   "cta": {
-    "consult": "Book an Engineering Consultation",
+    "consult": "Consultation Engineering",
     "catalog": "Engineering Catalog"
   },
   "hero": {
@@ -50,7 +50,7 @@
         "title": "Modular Cleanroom & HVAC Build",
         "subtitle": "Modular Cleanroom & HVAC Build",
         "std": "Standard: ISO 14644-1, GMP Grade A-D",
-        "desc": "Installation of modular, non-shedding cleanroom wall panels and ceiling systems. Integrating custom AHUs with HEPA filtration to maintain precise temperature, humidity, and differential pressures.",
+        "desc": "Installation of modular, non-shedding cleanroom wall panels and ceiling systems. Integrating custom AHUs with HEPA filtration to maintain precise temperature, humidity, and differential pressures — sized for energy-efficient operation to keep the facility's long-term utility footprint low.",
         "deliverables": ["Modular cleanroom wall structures", "Digital air pressure panels", "HEPA Terminal Filter setups"]
       },
       {
@@ -66,8 +66,8 @@
         "title": "Upgrade Computer Data Control System",
         "subtitle": "21 CFR Part 11",
         "std": "Standard: FDA 21 CFR Part 11",
-        "desc": "We upgrade the client's existing PLC and SCADA control software (CSV) to meet FDA 21 CFR Part 11 data integrity requirements, with tamper-proof audit trails for every recipe change.",
-        "deliverables": ["FDA Part 11 secure audit trails", "OPC UA system connectivity", "Biometric / secure PIN logic"]
+        "desc": "Upgrade the computer data control system to meet FDA 21 CFR Part 11 data security requirements, with tamper-proof audit trails and unique, attributable electronic signatures — the same OPC UA connectivity this upgrade establishes also integrates with serialization and track-and-trace systems to fully trace the origin of every production lot.",
+        "deliverables": ["FDA Part 11 secure audit trails", "OPC UA system connectivity", "Unique e-signatures (biometric / secure PIN)"]
       },
       {
         "num": "5",
@@ -154,7 +154,15 @@
     "desc": "Access detailed catalogs, product brochures, modular cleanroom datasheets, and whitepapers.",
     "doc_title": "ARGOTEX Corporate Capability & Installation Profile",
     "doc_desc": "Overview of modular panel options, HVAC parameters, line integrations, client references, and GMP checklists (PDF file).",
-    "button": "Download Company Profile"
+    "button": "Download Company Profile",
+    "modal_title": "Get the Engineering Catalog",
+    "modal_desc": "Enter your details below and the download will start automatically.",
+    "name_label": "Full Name *",
+    "email_label": "Work Email *",
+    "company_label": "Company / Factory Name *",
+    "submit_label": "Download Now",
+    "success_label": "Thank you! Your download should begin automatically.",
+    "error_label": "⚠️ Something went wrong. Please try again or email us directly at wasachon@axentragroup.net"
   },
   "contact": {
     "title": "Consultation Engineering",
@@ -167,14 +175,14 @@
     "solution": "Interested Solution *",
     "scope": "Project Scope / Cleanroom Dimensions / Timelines (Notes)",
     "placeholder_solution": "Please select a solution",
-    "submit": "Book an Engineering Consultation",
+    "submit": "Consultation Engineering",
     "success": "Engineering Consultation Scheduled — Thank you. Our lead system engineers will review your configuration parameters and follow up within 24 working hours.",
     "error": "⚠️ Error saving data. Please email us directly at wasachon@axentragroup.net"
   },
   "footer": {
     "banner_title": "Consult with Biopharma Design Engineers",
     "banner_desc": "Draft modular cleanrooms parameters and custom process lines limits with senior consultants",
-    "banner_button": "Book Engineering Consultation",
+    "banner_button": "Consultation Engineering",
     "company_desc": "Total Solutions for Biopharma — end-to-end systems integration and cleanroom engineering built for quality and results, operating under strict PIC/S and GMP standards.",
     "compliance": [
       { "slug": "pics-gmp", "label": "PIC/S GMP" },
