@@ -10,6 +10,7 @@ const nextConfig: NextConfig = {
   images: {
     remotePatterns: [
       { protocol: "https", hostname: "argotex-cms.onrender.com", pathname: "/assets/**" },
+      { protocol: "https", hostname: "cms.argotex.com", pathname: "/assets/**" },
       { protocol: "http", hostname: "localhost", port: "8055", pathname: "/assets/**" }
     ]
   }
