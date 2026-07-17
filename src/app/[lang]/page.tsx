@@ -12,11 +12,9 @@ import {
   Award,
   CheckCircle2,
   Clock,
-  Cpu,
   FileDown,
   FileText,
   ShieldCheck,
-  Users,
   ArrowRight,
   Check,
   Syringe,
@@ -78,13 +76,6 @@ export default async function Page({ params }: PageProps) {
     })
   };
 
-  // Icon mapping for Trust Metrics
-  const trustIcons = [
-    <Users key="users" className="h-6 w-6 text-medical-teal" />,
-    <CheckCircle2 key="check" className="h-6 w-6 text-medical-teal" />,
-    <Cpu key="cpu" className="h-6 w-6 text-medical-teal" />
-  ];
-
   // Icon mapping for Solutions
   const solutionIcons = {
     sterile: <Syringe className="h-8 w-8 text-medical-teal" />,
@@ -125,29 +116,6 @@ export default async function Page({ params }: PageProps) {
                 </Link>
               ))}
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* 2. Trust Metrics Section */}
-      <section className="bg-white py-12 border-b border-slate-200">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {[
-              { val: dict.trust.exp_value, lbl: dict.trust.exp_label },
-              { val: dict.trust.val_value, lbl: dict.trust.val_label },
-              { val: dict.trust.compliance_value, lbl: dict.trust.compliance_label }
-            ].map((metric, i) => (
-              <div key={metric.val} className="flex gap-4 p-4 items-start">
-                <div className="p-3 bg-slate-50 rounded-lg border border-slate-100 flex-shrink-0">
-                  {trustIcons[i]}
-                </div>
-                <div className="space-y-1">
-                  <h3 className="text-2xl font-bold text-slate-800 font-heading tracking-tight">{metric.val}</h3>
-                  <p className="text-xs text-slate-500 leading-relaxed font-sans">{metric.lbl}</p>
-                </div>
-              </div>
-            ))}
           </div>
         </div>
       </section>
