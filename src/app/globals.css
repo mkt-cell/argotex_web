@@ -1,11 +1,20 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&family=Sarabun:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&family=IBM+Plex+Mono:wght@400;500;600&family=Sarabun:wght@300;400;500;600;700&display=swap');
 @import "tailwindcss";
 
 @theme {
   /* Brand Colors */
   --color-medical-teal: #058aad;
   --color-validation-green: #27a038;
-  
+
+  /* Cleanroom Blue — sampled from the facility renders (hero, solutions imagery).
+     Secondary structural accent: ties diagrams, spec panels and technical
+     texture back to the actual cleanroom photography instead of floating
+     on generic neutral grey. */
+  --color-cleanroom-blue: #2c5490;
+  --color-cleanroom-blue-light: #4472a6;
+  --color-cleanroom-blue-50: #f0f4f9;
+  --color-cleanroom-blue-100: #e1e9f2;
+
   /* Neutral Slate Extensions */
   --color-slate-50: #f8fafc;
   --color-slate-100: #f1f5f9;
@@ -16,6 +25,10 @@
   /* Typography Design Tokens */
   --font-sans: 'Inter', 'Sarabun', sans-serif;
   --font-heading: 'Plus Jakarta Sans', 'Sarabun', sans-serif;
+  /* Technical/spec face — standard codes (ISO 14644-1, GMP Grade A-D),
+     deliverable numbering, spec figures. Gives the datasheet vernacular
+     already present in the copy an actual typographic voice. */
+  --font-mono-tech: 'IBM Plex Mono', 'Sarabun', monospace;
 }
 
 /* Base System Styling */

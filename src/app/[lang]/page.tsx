@@ -23,6 +23,7 @@ import {
   BottleWine
 } from 'lucide-react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 interface PageProps {
   params: Promise<{ lang: string }>;
@@ -84,6 +85,14 @@ export default async function Page({ params }: PageProps) {
     liquid: <BottleWine className="h-8 w-8 text-medical-teal" />
   };
 
+  // Product photo per solution, shown alongside its copy
+  const solutionImages = {
+    sterile: '/solutions/sterile-production.png',
+    solid: '/solutions/solid-dosage.png',
+    semisolid: '/solutions/semisolid-dosage.png',
+    liquid: '/solutions/liquid-dosage.png'
+  };
+
   // Small icon set for the quick-glance capabilities strip below the Hero
   const quickSolutionIcons: Record<string, React.ReactNode> = {
     sterile: <Syringe className="h-5 w-5 text-medical-teal" />,
@@ -136,13 +145,14 @@ export default async function Page({ params }: PageProps) {
             </p>
           </div>
 
-          {/* Solutions Grid */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          {/* Solutions List — copy left, illustration right */}
+          <div className="space-y-16 lg:space-y-20">
             {solutionsDict.items.map((item: any) => (
-              <Card key={item.id} className="flex flex-col justify-between gap-6 p-8 relative overflow-hidden group">
-                <div className="space-y-6">
+              <div key={item.id} className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center group">
+                {/* Copy Column */}
+                <div className="space-y-6 order-2 lg:order-1">
                   {/* Top Header */}
-                  <div className="flex justify-between items-start">
+                  <div className="flex items-center gap-3">
                     <div className="p-3 bg-slate-50 rounded-xl border border-slate-100 group-hover:bg-medical-teal/5 transition-colors">
                       {solutionIcons[item.id as keyof typeof solutionIcons]}
                     </div>
@@ -168,7 +178,7 @@ export default async function Page({ params }: PageProps) {
                   <div className="border-t border-slate-100 pt-4 space-y-3 font-sans">
                     <div className="text-xs font-semibold text-slate-800">
                       Technical Spec Summary:
-                      <span className="block font-normal text-slate-500 mt-1">{item.specs}</span>
+                      <span className="block font-normal text-slate-500 mt-1 font-mono-tech text-[11px] tracking-tight">{item.specs}</span>
                     </div>
                     <div className="space-y-1.5">
                       <span className="block text-xs font-semibold text-slate-800">Key Features:</span>
@@ -182,18 +192,31 @@ export default async function Page({ params }: PageProps) {
                       </ul>
                     </div>
                   </div>
+
+                  {/* Products Tag list */}
+                  <div className="border-t border-slate-100 pt-4 flex flex-wrap gap-2 items-center font-sans">
+                    <span className="text-[10px] uppercase font-bold text-slate-400 tracking-wider">Typical Outputs:</span>
+                    {item.products.map((prod: string) => (
+                      <span key={prod} className="bg-slate-50 text-slate-600 border border-slate-200 rounded px-2 py-0.5 text-xs font-medium">
+                        {prod}
+                      </span>
+                    ))}
+                  </div>
                 </div>
 
-                {/* Products Tag list */}
-                <div className="border-t border-slate-100 pt-4 flex flex-wrap gap-2 items-center font-sans">
-                  <span className="text-[10px] uppercase font-bold text-slate-400 tracking-wider">Typical Outputs:</span>
-                  {item.products.map((prod: string) => (
-                    <span key={prod} className="bg-slate-50 text-slate-600 border border-slate-200 rounded px-2 py-0.5 text-xs font-medium">
-                      {prod}
-                    </span>
-                  ))}
+                {/* Illustration Column */}
+                <div className="order-1 lg:order-2">
+                  <div className="bg-cleanroom-blue-50 rounded-2xl border border-cleanroom-blue-100 p-6 sm:p-10 flex items-center justify-center group-hover:border-medical-teal/30 transition-colors">
+                    <Image
+                      src={solutionImages[item.id as keyof typeof solutionImages]}
+                      alt={item.title}
+                      width={1200}
+                      height={800}
+                      className="w-full h-auto max-w-lg"
+                    />
+                  </div>
                 </div>
-              </Card>
+              </div>
             ))}
           </div>
         </div>
@@ -217,7 +240,7 @@ export default async function Page({ params }: PageProps) {
             {dict.lifecycle.steps.map((step: any) => (
               <div key={step.num} className="relative pl-8 sm:pl-12 group">
                 {/* Timeline Bullet */}
-                <span className="absolute -left-[17px] top-1.5 flex h-8 w-8 items-center justify-center rounded-full bg-slate-50 border-2 border-slate-200 text-xs font-bold text-slate-400 group-hover:bg-medical-teal group-hover:border-medical-teal group-hover:text-white transition-all duration-300">
+                <span className="absolute -left-[17px] top-1.5 flex h-8 w-8 items-center justify-center rounded-full bg-cleanroom-blue-50 border-2 border-cleanroom-blue-100 text-xs font-mono-tech font-semibold text-cleanroom-blue group-hover:bg-medical-teal group-hover:border-medical-teal group-hover:text-white transition-all duration-300">
                   {step.num}
                 </span>
 
@@ -225,7 +248,7 @@ export default async function Page({ params }: PageProps) {
                   {/* Info Column */}
                   <div className="lg:col-span-2 space-y-3">
                     <div className="space-y-1">
-                      <span className="inline-block text-[10px] font-bold uppercase tracking-wider text-medical-teal font-sans">
+                      <span className="inline-block text-[10px] font-semibold uppercase tracking-wider text-medical-teal font-mono-tech">
                         {step.std}
                       </span>
                       <h3 className="text-xl sm:text-2xl font-bold tracking-tight text-slate-800 group-hover:text-medical-teal transition-colors font-heading">
