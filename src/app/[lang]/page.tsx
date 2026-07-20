@@ -206,7 +206,7 @@ export default async function Page({ params }: PageProps) {
 
                 {/* Illustration Column */}
                 <div className="order-1 lg:order-2">
-                  <div className="bg-cleanroom-blue-50 rounded-2xl border border-cleanroom-blue-100 p-6 sm:p-10 flex items-center justify-center group-hover:border-medical-teal/30 transition-colors">
+                  <div className="bg-white rounded-2xl border border-slate-200 p-6 sm:p-10 flex items-center justify-center group-hover:border-medical-teal/30 transition-colors">
                     <Image
                       src={solutionImages[item.id as keyof typeof solutionImages]}
                       alt={item.title}

@@ -61,7 +61,7 @@ export const Hero: React.FC<HeroProps> = ({ dict, lang }) => {
 
           {/* VISUAL HERO SIDE (70%) */}
           <div className="lg:col-span-7 w-full order-1 lg:order-2">
-            <div className="relative w-full h-[300px] sm:h-[450px] lg:h-[500px] bg-cleanroom-blue-50 rounded-2xl border border-cleanroom-blue-100 p-6 sm:p-10">
+            <div className="relative w-full h-[300px] sm:h-[450px] lg:h-[500px] bg-white rounded-2xl border border-slate-200 p-6 sm:p-10">
               <Image
                 src="/hero-visual.png"
                 alt="Argotex Cleanroom Pipeline Machinery Integration"
