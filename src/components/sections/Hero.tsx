@@ -57,11 +57,6 @@ export const Hero: React.FC<HeroProps> = ({ dict, lang }) => {
                 </button>
               </Link>
             </div>
-            
-            {/* Credit */}
-            <p className="text-[11px] text-slate-400 mt-4 border-l-2 border-slate-200 pl-2">
-              {dict.hero.credit}
-            </p>
           </div>
 
           {/* VISUAL HERO SIDE (70%) */}

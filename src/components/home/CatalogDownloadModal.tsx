@@ -8,7 +8,7 @@ interface CatalogDownloadModalProps {
   dict: any;
 }
 
-const CATALOG_PDF_PATH = '/downloads/argotex-engineering-catalog.pdf';
+const CATALOG_PDF_PATH = '/downloads/argotex-profile.pdf';
 
 export const CatalogDownloadModal: React.FC<CatalogDownloadModalProps> = ({ dict }) => {
   const [open, setOpen] = useState(false);
