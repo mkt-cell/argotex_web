@@ -24,6 +24,8 @@ export async function POST(request: Request) {
       solution: body.solution,
       scope: body.scope,
       source: 'Corporate Website Lead Form',
+      consent: body.consent === true,
+      consent_at: body.consentAt ?? null,
     });
 
     if (dbError) {

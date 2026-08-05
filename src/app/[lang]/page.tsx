@@ -347,7 +347,7 @@ export default async function Page({ params }: PageProps) {
               </div>
             </div>
             
-            <CatalogDownloadModal dict={dict} />
+            <CatalogDownloadModal dict={dict} lang={lang} />
           </div>
         </div>
       </section>
@@ -369,7 +369,7 @@ export default async function Page({ params }: PageProps) {
 
             {/* Form Column */}
             <div className="lg:col-span-7 bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 shadow-sm">
-              <ContactForm dict={dict} />
+              <ContactForm dict={dict} lang={lang} />
             </div>
           </div>
         </div>

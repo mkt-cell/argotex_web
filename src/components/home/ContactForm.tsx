@@ -1,13 +1,16 @@
 'use client';
 
 import React, { useState } from 'react';
+import Link from 'next/link';
 import { Button } from '@/components/ui/Button';
 
 interface ContactFormProps {
   dict: any;
+  lang: string;
 }
 
-export const ContactForm: React.FC<ContactFormProps> = ({ dict }) => {
+export const ContactForm: React.FC<ContactFormProps> = ({ dict, lang }) => {
+  const [consent, setConsent] = useState(false);
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
@@ -37,7 +40,11 @@ export const ContactForm: React.FC<ContactFormProps> = ({ dict }) => {
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify(formData),
+        body: JSON.stringify({
+          ...formData,
+          consent: true,
+          consentAt: new Date().toISOString(),
+        }),
       });
 
       if (!response.ok) {
@@ -54,6 +61,7 @@ export const ContactForm: React.FC<ContactFormProps> = ({ dict }) => {
         solution: '',
         scope: '',
       });
+      setConsent(false);
     } catch (error) {
       console.error(error);
       setStatus('error');
@@ -199,12 +207,34 @@ export const ContactForm: React.FC<ContactFormProps> = ({ dict }) => {
         </div>
       )}
 
+      {/* PDPA Consent */}
+      <label className="flex items-start gap-3 cursor-pointer">
+        <input
+          type="checkbox"
+          name="consent"
+          required
+          checked={consent}
+          onChange={(e) => setConsent(e.target.checked)}
+          className="mt-0.5 h-4 w-4 flex-shrink-0 rounded border-slate-300 text-medical-teal focus:ring-2 focus:ring-medical-teal/20 cursor-pointer"
+        />
+        <span className="text-xs text-slate-500 leading-relaxed">
+          {dict.pdpa.consent_prefix}{' '}
+          <Link
+            href={`/${lang}/privacy-policy`}
+            target="_blank"
+            className="text-medical-teal font-medium underline underline-offset-2 hover:text-medical-teal/80"
+          >
+            {dict.pdpa.consent_link}
+          </Link>
+        </span>
+      </label>
+
       {/* Submit Button */}
       <Button
         type="submit"
         variant="primary"
         className="w-full py-3.5 font-bold shadow-md shadow-medical-teal/10 hover:shadow-lg disabled:opacity-50 cursor-pointer"
-        disabled={loading}
+        disabled={loading || !consent}
       >
         {loading ? 'Processing...' : dict.contact.submit}
       </Button>

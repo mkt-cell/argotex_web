@@ -214,6 +214,15 @@
   "standards": {
     "source_label": "Source"
   },
+  "pdpa": {
+    "consent_prefix": "I consent to Argotex collecting and using the personal data above for the purpose of contacting me and providing the requested consultation, under the",
+    "consent_link": "Privacy Policy",
+    "consent_required": "Please accept the collection of your personal data before continuing.",
+    "cookie_message": "This site uses cookies to keep things running smoothly and to analyze traffic. By continuing you accept their use.",
+    "cookie_link": "Privacy Policy",
+    "cookie_accept": "Accept all",
+    "cookie_decline": "Essential only"
+  },
   "legal": {
     "updated_label": "Last updated",
     "updated_date": "July 9, 2026",

@@ -1,18 +1,21 @@
 'use client';
 
 import React, { useState } from 'react';
+import Link from 'next/link';
 import { Download, X } from 'lucide-react';
 import { Button } from '@/components/ui/Button';
 
 interface CatalogDownloadModalProps {
   dict: any;
+  lang: string;
 }
 
 const CATALOG_PDF_PATH = '/downloads/argotex-profile.pdf';
 
-export const CatalogDownloadModal: React.FC<CatalogDownloadModalProps> = ({ dict }) => {
+export const CatalogDownloadModal: React.FC<CatalogDownloadModalProps> = ({ dict, lang }) => {
   const [open, setOpen] = useState(false);
   const [formData, setFormData] = useState({ name: '', email: '', company: '' });
+  const [consent, setConsent] = useState(false);
   const [loading, setLoading] = useState(false);
   const [status, setStatus] = useState<'idle' | 'success' | 'error'>('idle');
 
@@ -39,7 +42,11 @@ export const CatalogDownloadModal: React.FC<CatalogDownloadModalProps> = ({ dict
       const response = await fetch('/api/catalog-download', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(formData),
+        body: JSON.stringify({
+          ...formData,
+          consent: true,
+          consentAt: new Date().toISOString(),
+        }),
       });
 
       if (!response.ok) {
@@ -49,6 +56,7 @@ export const CatalogDownloadModal: React.FC<CatalogDownloadModalProps> = ({ dict
       setStatus('success');
       triggerDownload();
       setFormData({ name: '', email: '', company: '' });
+      setConsent(false);
     } catch (error) {
       console.error(error);
       setStatus('error');
@@ -157,11 +165,32 @@ export const CatalogDownloadModal: React.FC<CatalogDownloadModalProps> = ({ dict
                 </div>
               )}
 
+              <label className="flex items-start gap-3 cursor-pointer">
+                <input
+                  type="checkbox"
+                  name="consent"
+                  required
+                  checked={consent}
+                  onChange={(e) => setConsent(e.target.checked)}
+                  className="mt-0.5 h-4 w-4 flex-shrink-0 rounded border-slate-300 text-medical-teal focus:ring-2 focus:ring-medical-teal/20 cursor-pointer"
+                />
+                <span className="text-xs text-slate-500 leading-relaxed">
+                  {dict.pdpa.consent_prefix}{' '}
+                  <Link
+                    href={`/${lang}/privacy-policy`}
+                    target="_blank"
+                    className="text-medical-teal font-medium underline underline-offset-2 hover:text-medical-teal/80"
+                  >
+                    {dict.pdpa.consent_link}
+                  </Link>
+                </span>
+              </label>
+
               <Button
                 type="submit"
                 variant="primary"
                 className="w-full py-3 font-bold shadow-md shadow-medical-teal/10 hover:shadow-lg disabled:opacity-50 cursor-pointer"
-                disabled={loading}
+                disabled={loading || !consent}
               >
                 {loading ? 'Processing...' : dict.downloads.submit_label}
               </Button>

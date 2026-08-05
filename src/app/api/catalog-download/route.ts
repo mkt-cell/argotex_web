@@ -27,6 +27,8 @@ export async function POST(request: Request) {
       solution: '',
       scope: '',
       source: 'Engineering Catalog Download',
+      consent: body.consent === true,
+      consent_at: body.consentAt ?? null,
     });
 
     if (dbError) {
