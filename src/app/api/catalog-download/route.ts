@@ -18,6 +18,7 @@ export async function POST(request: Request) {
     // Reuses the same lead table as the main contact form — this form only
     // collects a single name field and no phone/solution/scope, so those
     // columns are left blank rather than split/guessed.
+    const consented = body.consent === true;
     const { error: dbError } = await supabase.from('contact_submissions').insert({
       first_name: body.name,
       last_name: '',
@@ -27,12 +28,15 @@ export async function POST(request: Request) {
       solution: '',
       scope: '',
       source: 'Engineering Catalog Download',
-      consent: body.consent === true,
-      consent_at: body.consentAt ?? null,
+      consent: consented,
+      // Server-stamped so the PDPA audit time can't be forged by the client.
+      consent_at: consented ? new Date().toISOString() : null,
     });
 
     if (dbError) {
-      throw new Error(`Failed to save submission: ${dbError.message}`);
+      // Log the detail server-side; don't leak DB/schema internals to the client.
+      console.error('Failed to save catalog-download submission:', dbError.message);
+      return NextResponse.json({ error: 'Failed to submit.' }, { status: 500 });
     }
 
     // Best-effort notification to the automation pipeline — the submission is
@@ -52,6 +56,7 @@ export async function POST(request: Request) {
 
     return NextResponse.json({ success: true, message: 'Lead successfully routed.' });
   } catch (error: any) {
-    return NextResponse.json({ error: error.message || 'Failed to submit.' }, { status: 400 });
+    console.error('Catalog-download submission error:', error?.message ?? error);
+    return NextResponse.json({ error: 'Failed to submit.' }, { status: 400 });
   }
 }

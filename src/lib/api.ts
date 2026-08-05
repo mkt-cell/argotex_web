@@ -1,5 +1,25 @@
 const DIRECTUS_URL = process.env.NEXT_PUBLIC_DIRECTUS_URL || 'http://localhost:8055';
 
+// Cap how long a CMS request may stall — the CMS runs on a free tier that
+// cold-starts, and a hanging fetch during static generation (`next build`)
+// blocks the whole page render until Next's 60s limit, failing the build.
+// Next's cached fetch ignores an AbortSignal, so we race the fetch against an
+// explicit timeout that rejects; the caller's try/catch then falls back to
+// placeholder content instead of hanging.
+const CMS_FETCH_TIMEOUT_MS = 8000;
+
+function cmsFetch(url: string, init: RequestInit & { next?: any }): Promise<Response> {
+  return Promise.race([
+    fetch(url, init),
+    new Promise<never>((_, reject) =>
+      setTimeout(
+        () => reject(new Error(`CMS fetch timed out after ${CMS_FETCH_TIMEOUT_MS}ms: ${url}`)),
+        CMS_FETCH_TIMEOUT_MS
+      )
+    )
+  ]);
+}
+
 // Cache tags used by revalidateTag() in the /api/revalidate webhook (see route.ts).
 // Keep in sync with the collection names Directus flows report.
 export const CMS_TAGS = {
@@ -69,7 +89,7 @@ function localizedParams(extra: Record<string, string> = {}, lang: string) {
 export async function getDynamicIndustries(lang: 'th' | 'en'): Promise<IndustryItem[]> {
   try {
     const params = localizedParams({ fields: 'id,slug,icon_name,translations.*' }, lang);
-    const res = await fetch(`${DIRECTUS_URL}/items/industries?${params}`, {
+    const res = await cmsFetch(`${DIRECTUS_URL}/items/industries?${params}`, {
       next: { revalidate: 3600, tags: [CMS_TAGS.industries] } // ISR Cache: revalidate every hour, or on-demand via webhook
     });
 
@@ -95,7 +115,7 @@ export async function getIndustryBySlug(lang: 'th' | 'en', slug: string): Promis
       { fields: 'slug,photo,translations.*', 'filter[slug][_eq]': slug },
       lang
     );
-    const res = await fetch(`${DIRECTUS_URL}/items/industries?${params}`, {
+    const res = await cmsFetch(`${DIRECTUS_URL}/items/industries?${params}`, {
       next: { revalidate: 3600, tags: [CMS_TAGS.industries] }
     });
 
@@ -127,7 +147,7 @@ export async function getDynamicSolutions(lang: 'th' | 'en'): Promise<SolutionIt
       { fields: 'id,slug,status,industry_id,translations.*', 'filter[status][_eq]': 'published' },
       lang
     );
-    const res = await fetch(`${DIRECTUS_URL}/items/solutions?${params}`, {
+    const res = await cmsFetch(`${DIRECTUS_URL}/items/solutions?${params}`, {
       next: { revalidate: 3600, tags: [CMS_TAGS.solutions] }
     });
 
@@ -156,7 +176,7 @@ export async function getDynamicProjects(lang: 'th' | 'en'): Promise<ProjectItem
       { fields: 'id,client_name,duration_months,project_type,result_metric,translations.*' },
       lang
     );
-    const res = await fetch(`${DIRECTUS_URL}/items/projects?${params}`, {
+    const res = await cmsFetch(`${DIRECTUS_URL}/items/projects?${params}`, {
       next: { revalidate: 3600, tags: [CMS_TAGS.projects] }
     });
 
@@ -186,7 +206,7 @@ export async function getStandardBySlug(lang: 'th' | 'en', slug: string): Promis
       { fields: 'slug,translations.*', 'filter[slug][_eq]': slug },
       lang
     );
-    const res = await fetch(`${DIRECTUS_URL}/items/standards?${params}`, {
+    const res = await cmsFetch(`${DIRECTUS_URL}/items/standards?${params}`, {
       next: { revalidate: 3600, tags: [CMS_TAGS.standards] }
     });
 
