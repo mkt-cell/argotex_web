@@ -29,6 +29,15 @@ interface PageProps {
   params: Promise<{ lang: string }>;
 }
 
+// Render on request instead of pre-rendering at build time. The homepage pulls
+// industries/solutions from the CMS, which runs on a free tier that cold-starts;
+// static generation blocks on that fetch and can exceed Next's 60s build limit,
+// failing the deploy whenever the CMS happens to be spun down. Rendering
+// dynamically keeps the build independent of CMS state — the fetch still has an
+// 8s timeout and falls back to the bundled copy, and its result is cached for an
+// hour (`revalidate: 3600`), so runtime CMS load stays minimal.
+export const dynamic = 'force-dynamic';
+
 // Maps the static copy's solution ids to the slugs configured in Directus
 const SOLUTION_SLUGS: Record<string, string> = {
   sterile: 'sterile-production',
