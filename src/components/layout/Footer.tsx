@@ -38,13 +38,12 @@ export const Footer: React.FC<FooterProps> = ({ dict, lang }) => {
             <p className="text-[10px] uppercase font-bold tracking-wider text-slate-400 mb-2">Compliance & Standards</p>
             <div className="flex flex-wrap gap-1.5">
               {dict.footer.compliance.map((std: { slug: string; label: string }) => (
-                <Link
+                <span
                   key={std.slug}
-                  href={`/${lang}/standards/${std.slug}`}
-                  className="bg-slate-700 text-slate-300 text-[9px] font-semibold px-2 py-0.5 rounded border border-slate-600 hover:border-medical-teal hover:text-medical-teal transition-colors"
+                  className="bg-slate-700 text-slate-300 text-[9px] font-semibold px-2 py-0.5 rounded border border-slate-600"
                 >
                   {std.label}
-                </Link>
+                </span>
               ))}
             </div>
           </div>
@@ -56,7 +55,7 @@ export const Footer: React.FC<FooterProps> = ({ dict, lang }) => {
           <ul className="space-y-2 text-xs text-slate-400">
             {dict.footer.industries.map((ind: { slug: string; label: string }) => (
               <li key={ind.slug}>
-                <Link href={`/${lang}/industries/${ind.slug}`} className="hover:text-medical-teal transition-colors">
+                <Link href={`/${lang}#solutions`} className="hover:text-medical-teal transition-colors">
                   {ind.label}
                 </Link>
               </li>

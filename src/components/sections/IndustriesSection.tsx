@@ -47,9 +47,9 @@ export const IndustriesSection: React.FC<IndustriesSectionProps> = ({ lang, dict
         {/* Grid of Clickable Industries */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {dict.items.map((item) => (
-            <Link 
-              key={item.id} 
-              href={`/${lang}/industries/${item.id}`}
+            <Link
+              key={item.id}
+              href={`/${lang}#solutions`}
               className="group block no-underline focus:outline-none"
             >
               <Card className="h-full p-8 transition-all duration-300 border border-slate-200 bg-white hover:border-medical-teal hover:shadow-md group-hover:-translate-y-1">

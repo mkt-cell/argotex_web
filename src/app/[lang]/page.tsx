@@ -7,7 +7,6 @@ import { ContactForm } from '@/components/home/ContactForm';
 import { CatalogDownloadModal } from '@/components/home/CatalogDownloadModal';
 import { IndustriesSection } from '@/components/sections/IndustriesSection';
 import { Hero } from '@/components/sections/Hero';
-import { getDynamicIndustries, getDynamicSolutions } from '@/lib/api';
 import {
   Award,
   CheckCircle2,
@@ -29,23 +28,6 @@ interface PageProps {
   params: Promise<{ lang: string }>;
 }
 
-// Render on request instead of pre-rendering at build time. The homepage pulls
-// industries/solutions from the CMS, which runs on a free tier that cold-starts;
-// static generation blocks on that fetch and can exceed Next's 60s build limit,
-// failing the deploy whenever the CMS happens to be spun down. Rendering
-// dynamically keeps the build independent of CMS state — the fetch still has an
-// 8s timeout and falls back to the bundled copy, and its result is cached for an
-// hour (`revalidate: 3600`), so runtime CMS load stays minimal.
-export const dynamic = 'force-dynamic';
-
-// Maps the static copy's solution ids to the slugs configured in Directus
-const SOLUTION_SLUGS: Record<string, string> = {
-  sterile: 'sterile-production',
-  solid: 'solid-dosage',
-  semisolid: 'semi-solid-dosage',
-  liquid: 'liquid-dosage'
-};
-
 interface SolutionCopy {
   id: string;
   title: string;
@@ -60,31 +42,8 @@ interface SolutionCopy {
 export default async function Page({ params }: PageProps) {
   const { lang } = await params;
   const dict = await getDictionary(lang as Locale);
-  const [cmsIndustries, cmsSolutions] = await Promise.all([
-    getDynamicIndustries(lang as 'th' | 'en'),
-    getDynamicSolutions(lang as 'th' | 'en')
-  ]);
-  const industriesDict = {
-    ...dict.industries,
-    items: cmsIndustries.length > 0 ? cmsIndustries : dict.industries.items
-  };
-
-  // Static copy carries rich fields (badge/specs/features/products) the CMS
-  // doesn't model yet — overlay CMS title/subtitle/desc onto it by slug so
-  // published edits in Directus show up without losing that structured layout.
-  const solutionsDict = {
-    ...dict.solutions,
-    items: (dict.solutions.items as SolutionCopy[]).map((item) => {
-      const cmsItem = cmsSolutions.find((s) => s.slug === SOLUTION_SLUGS[item.id]);
-      if (!cmsItem) return item;
-      return {
-        ...item,
-        title: cmsItem.title || item.title,
-        subtitle: cmsItem.subtitle || item.subtitle,
-        desc: cmsItem.content || item.desc
-      };
-    })
-  };
+  const industriesDict = dict.industries;
+  const solutionsDict = dict.solutions;
 
   // Icon mapping for Solutions
   const solutionIcons = {

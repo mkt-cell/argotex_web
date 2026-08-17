@@ -1,10 +1,12 @@
 import { NextResponse } from 'next/server';
 import type { NextRequest } from 'next/server';
 
+// Next.js 16 renamed Middleware to Proxy (same functionality). This redirects
+// locale-less paths to the default locale, e.g. `/` -> `/th`.
 const locales = ['th', 'en'];
 const defaultLocale = 'th';
 
-export function middleware(request: NextRequest) {
+export function proxy(request: NextRequest) {
   const { pathname } = request.nextUrl;
 
   // 1. Skip if public files or internal Next.js/API routes
