@@ -90,7 +90,7 @@ export const Footer: React.FC<FooterProps> = ({ dict, lang }) => {
             <div className="flex gap-2 items-center">
               <Phone className="h-4 w-4 text-medical-teal flex-shrink-0" />
               <div>
-                <p>+66 (0) 86 9740199</p>
+                <p>+66 (0) 86 974 0199</p>
                 <p>+66 (0) 63 639 9009</p>
               </div>
             </div>
