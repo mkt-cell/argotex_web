@@ -162,7 +162,7 @@
     "company_label": "Company / Factory Name *",
     "submit_label": "Download Now",
     "success_label": "Thank you! Your download should begin automatically.",
-    "error_label": "⚠️ Something went wrong. Please try again or email us directly at wasachon@axentragroup.net"
+    "error_label": "⚠️ Something went wrong. Please try again or email us directly at chayakorn@axentragroup.net or wasachon@axentragroup.net"
   },
   "contact": {
     "title": "Consultation Engineering",
@@ -177,7 +177,7 @@
     "placeholder_solution": "Please select a solution",
     "submit": "Consultation Engineering",
     "success": "Engineering Consultation Scheduled — Thank you. Our lead system engineers will review your configuration parameters and follow up within 24 working hours.",
-    "error": "⚠️ Error saving data. Please email us directly at wasachon@axentragroup.net"
+    "error": "⚠️ Error saving data. Please email us directly at chayakorn@axentragroup.net or wasachon@axentragroup.net"
   },
   "footer": {
     "banner_title": "Consult with Biopharma Design Engineers",
@@ -229,7 +229,7 @@
     "privacy": {
       "title": "Privacy Policy",
       "meta_description": "Argotex Co., Ltd.'s privacy policy — how we collect, use, and protect your personal data under Thailand's Personal Data Protection Act (PDPA).",
-      "body": "<h2>Information We Collect</h2><p>When you submit the contact form on this website, we collect your full name, work email, phone number, company/factory name, the solution or service you're interested in, and the project scope details you provide.</p><h2>How We Use Your Information</h2><p>We use this information to respond to your inquiry and provide the engineering consultation requested, to prepare a preliminary project proposal, and to improve the quality of our services.</p><h2>Data Storage and Security</h2><p>Your information is stored securely in an encrypted database and is accessible only to team members involved in following up on your request.</p><h2>Disclosure to Third Parties</h2><p>We do not sell or rent your personal information to third parties, except where necessary to deliver our services, such as internal lead-routing to our sales team, or as required by law.</p><h2>Your Rights</h2><p>Under Thailand's Personal Data Protection Act B.E. 2562 (2019) (PDPA), you have the right to access, correct, delete, or withdraw consent for the use of your personal data at any time by contacting us using the details below.</p><h2>Contact</h2><p>For questions about this Privacy Policy, contact us at <a href=\"mailto:wasachon@axentragroup.net\">wasachon@axentragroup.net</a></p>"
+      "body": "<h2>Information We Collect</h2><p>When you submit the contact form on this website, we collect your full name, work email, phone number, company/factory name, the solution or service you're interested in, and the project scope details you provide.</p><h2>How We Use Your Information</h2><p>We use this information to respond to your inquiry and provide the engineering consultation requested, to prepare a preliminary project proposal, and to improve the quality of our services.</p><h2>Data Storage and Security</h2><p>Your information is stored securely in an encrypted database and is accessible only to team members involved in following up on your request.</p><h2>Disclosure to Third Parties</h2><p>We do not sell or rent your personal information to third parties, except where necessary to deliver our services, such as internal lead-routing to our sales team, or as required by law.</p><h2>Your Rights</h2><p>Under Thailand's Personal Data Protection Act B.E. 2562 (2019) (PDPA), you have the right to access, correct, delete, or withdraw consent for the use of your personal data at any time by contacting us using the details below.</p><h2>Contact</h2><p>For questions about this Privacy Policy, contact us at <a href=\"mailto:chayakorn@axentragroup.net\">chayakorn@axentragroup.net</a> or <a href=\"mailto:wasachon@axentragroup.net\">wasachon@axentragroup.net</a></p>"
     },
     "terms": {
       "title": "Terms & Conditions",

@@ -90,15 +90,20 @@ export const Footer: React.FC<FooterProps> = ({ dict, lang }) => {
             <div className="flex gap-2 items-center">
               <Phone className="h-4 w-4 text-medical-teal flex-shrink-0" />
               <div>
-                <p>+66 (0) 91 745 8863</p>
+                <p>+66 (0) 869740199</p>
                 <p>+66 (0) 63 639 9009</p>
               </div>
             </div>
             <div className="flex gap-2 items-center">
               <Mail className="h-4 w-4 text-medical-teal flex-shrink-0" />
-              <a href="mailto:wasachon@axentragroup.net" className="hover:text-medical-teal transition-colors">
-                wasachon@axentragroup.net
-              </a>
+              <div>
+                <a href="mailto:chayakorn@axentragroup.net" className="hover:text-medical-teal transition-colors block">
+                  chayakorn@axentragroup.net
+                </a>
+                <a href="mailto:wasachon@axentragroup.net" className="hover:text-medical-teal transition-colors block">
+                  wasachon@axentragroup.net
+                </a>
+              </div>
             </div>
           </div>
         </div>
